@@ -10,6 +10,8 @@ object Versions{
     const val espresso = "3.5.0"
     const val androidTools = "7.3.1"
     const val jetbrainsKotlin = "1.7.10"
+    const val navigationFragment = "2.5.3"
+    const val navigationUi = "2.5.3"
 }
 
 object Configs{
@@ -51,6 +53,8 @@ object Dependencies {
     const val junit = "junit:junit:${Versions.junit}"
     const val androidxJunit = "androidx.test.ext:junit:${Versions.androidxJunit}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationFragment}"
+    const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigationUi}"
 }
 
 object Classpath{

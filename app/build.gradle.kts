@@ -29,6 +29,9 @@ android {
     kotlinOptions {
         jvmTarget = KotlinOptions.jvmTarget
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -36,6 +39,8 @@ dependencies {
     implementation (Dependencies.appcompat)
     implementation (Dependencies.material)
     implementation (Dependencies.constraintLayout)
+    implementation(Dependencies.navigationFragment)
+    implementation(Dependencies.navigationUi)
     testImplementation (Dependencies.junit)
     androidTestImplementation (Dependencies.androidxJunit)
     androidTestImplementation (Dependencies.espresso)
