@@ -1,3 +1,5 @@
+import org.gradle.api.JavaVersion
+
 object Versions{
     const val kotlin = "1.7.0"
     const val appcompat = "1.5.1"
@@ -6,6 +8,39 @@ object Versions{
     const val junit = "4.13.2"
     const val androidxJunit = "1.1.4"
     const val espresso = "3.5.0"
+    const val androidTools = "7.3.1"
+    const val jetbrainsKotlin = "1.7.10"
+}
+
+object Configs{
+    const val namespace = "com.example.kotlindls"
+    const val compileSdk = 33
+    const val applicationId = "com.example.kotlindls"
+    const val minSdk = 24
+    const val targetSdk = 33
+    const val versionCode = 1
+    const val versionName = "1.0"
+    const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+}
+
+object Plugins{
+    const val application = "com.android.application"
+    const val android = "android"
+}
+
+object BuildTypes {
+    const val getByName = "release"
+    const val getDefaultProguardFile = "proguard-android-optimize.txt"
+    const val rules = "proguard-rules.pro"
+}
+
+object CompileOptions{
+    val sourceCompatibility = JavaVersion.VERSION_11
+    val targetCompatibility = JavaVersion.VERSION_11
+}
+
+object KotlinOptions{
+    const val jvmTarget = "11"
 }
 
 object Dependencies {
@@ -16,4 +51,9 @@ object Dependencies {
     const val junit = "junit:junit:${Versions.junit}"
     const val androidxJunit = "androidx.test.ext:junit:${Versions.androidxJunit}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+}
+
+object Classpath{
+    const val androidTools = "com.android.tools.build:gradle:${Versions.androidTools}"
+    const val jetbrainsKotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.jetbrainsKotlin}"
 }

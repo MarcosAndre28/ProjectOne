@@ -1,39 +1,37 @@
 plugins {
-    id ("com.android.application")
-    kotlin ("android")
+    id (Plugins.application)
+    kotlin (Plugins.android)
 }
 
 android {
-    namespace = "com.example.kotlindls"
-    compileSdk = 32
+    namespace = Configs.namespace
+    compileSdk = Configs.compileSdk
 
     defaultConfig {
-        applicationId = "com.example.kotlindls"
-        minSdk = 24
-        targetSdk = 32
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        applicationId = Configs.applicationId
+        minSdk = Configs.minSdk
+        targetSdk = Configs.targetSdk
+        versionCode = Configs.versionCode
+        versionName = Configs.versionName
+        testInstrumentationRunner = Configs.testInstrumentationRunner
     }
 
     buildTypes {
-        getByName("release") {
+        getByName(BuildTypes.getByName) {
             isMinifyEnabled = true
-            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles (getDefaultProguardFile(BuildTypes.getDefaultProguardFile), BuildTypes.rules)
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = CompileOptions.sourceCompatibility
+        targetCompatibility = CompileOptions.targetCompatibility
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = KotlinOptions.jvmTarget
     }
 }
 
 dependencies {
-
     implementation (Dependencies.androidx)
     implementation (Dependencies.appcompat)
     implementation (Dependencies.material)
