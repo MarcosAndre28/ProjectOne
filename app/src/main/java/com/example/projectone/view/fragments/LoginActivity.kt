@@ -3,13 +3,13 @@ package com.example.projectone.view.fragments
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import com.example.kotlindls.databinding.LoginActivityBinding
+import com.example.kotlindls.databinding.SplashActivityBinding
 import com.example.projectone.MainActivity
 import com.example.projectone.base.BaseActivity
 
-class LoginActivity : BaseActivity<LoginActivityBinding>(){
+class LoginActivity : BaseActivity<SplashActivityBinding>(){
 
-    override fun getViewBinding() = LoginActivityBinding.inflate(layoutInflater)
+    override fun getViewBinding() = SplashActivityBinding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
