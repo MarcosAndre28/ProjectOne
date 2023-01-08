@@ -7,6 +7,12 @@
     android:title="@string/home_menu" />
 
     <item
+        android:id="@+id/navigation_favorites"
+        android:title="@string/favorite"
+        android:icon="@drawable/ic_favorite"
+        />
+
+    <item
     android:id="@+id/navigation_crypto"
     android:title="@string/crypto_menu"
     android:icon="@drawable/ic_money"

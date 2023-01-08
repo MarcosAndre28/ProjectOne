@@ -21,10 +21,18 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_ticker"
             app:destination="@id/navigation_ticker" />
+        <action
+            android:id="@+id/action_navigation_home_to_favoritesFragment"
+            app:destination="@id/navigation_favorites" />
     </fragment>
     <fragment
         android:id="@+id/navigation_ticker"
         tools:layout="@layout/ticker_fragment"
         android:name="com.example.projectone.view.fragments.TickerFragment"
         android:label="TickerFragment" />
+    <fragment
+        android:id="@+id/navigation_favorites"
+        tools:layout="@layout/favorites_fragment"
+        android:name="com.example.projectone.view.fragments.FavoritesFragment"
+        android:label="FavoritesFragment" />
 </navigation>
