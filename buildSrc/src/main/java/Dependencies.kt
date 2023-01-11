@@ -12,6 +12,7 @@ object Versions{
     const val jetbrainsKotlin = "1.7.10"
     const val navigationFragment = "2.5.3"
     const val navigationUi = "2.5.3"
+    const val spd = "1.1.0"
 }
 
 object Configs{
@@ -55,6 +56,8 @@ object Dependencies {
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationFragment}"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigationUi}"
+    const val spd = "com.intuit.sdp:sdp-android:${Versions.spd}"
+
 }
 
 object Classpath{

@@ -41,6 +41,7 @@ dependencies {
     implementation (Dependencies.constraintLayout)
     implementation(Dependencies.navigationFragment)
     implementation(Dependencies.navigationUi)
+    implementation(Dependencies.spd)
     testImplementation (Dependencies.junit)
     androidTestImplementation (Dependencies.androidxJunit)
     androidTestImplementation (Dependencies.espresso)

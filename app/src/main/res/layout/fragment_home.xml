@@ -9,21 +9,21 @@
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:gravity="center"
-        android:text="Dados atualizados em 08/01/2023"
+        android:text="Ultima atualização 08/01/2023"
         android:textColor="@color/white"
-        android:textSize="30dp" />
+        android:textSize="@dimen/_15sdp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu1"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="@dimen/_10sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -31,9 +31,9 @@
 
             <ImageView
                 android:id="@+id/icon_dollar"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="2dp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_2sdp"
                 android:src="@drawable/dollar" />
 
             <TextView
@@ -41,9 +41,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_dollar"
                 android:text="Dolar:   R$ 5,215"
+                android:textSize="@dimen/_15sdp"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -53,12 +54,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu1"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="@dimen/_10sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -66,9 +67,9 @@
 
             <ImageView
                 android:id="@+id/icon_euro"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="2dp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_2sdp"
                 android:src="@drawable/euro" />
 
             <TextView
@@ -76,9 +77,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_euro"
                 android:text="Dolar em Euro:   $ 1,215"
+                android:textSize="@dimen/_15sdp"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -88,12 +90,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu1"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="@dimen/_10sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -101,9 +103,9 @@
 
             <ImageView
                 android:id="@+id/icon_inflation"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="2dp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_2sdp"
                 android:src="@drawable/inflation" />
 
             <TextView
@@ -111,9 +113,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_inflation"
                 android:text="Infação:   6.47 %"
+                android:textSize="@dimen/_15sdp"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -123,12 +126,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu1"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="@dimen/_10sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -136,9 +139,9 @@
 
             <ImageView
                 android:id="@+id/icon_selic"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="2dp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_2sdp"
                 android:src="@drawable/selic" />
 
             <TextView
@@ -146,9 +149,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_selic"
                 android:text="Selic : 13,25 %"
+                android:textSize="@dimen/_15sdp"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -159,21 +163,21 @@
         android:id="@+id/textViewSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:gravity="center"
-        android:text="Pesquisas"
+        android:text="Pesquisar"
         android:textColor="@color/white"
-        android:textSize="30dp" />
+        android:textSize="@dimen/_22sdp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu2"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="@dimen/_10sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -181,35 +185,34 @@
 
             <ImageView
                 android:id="@+id/icon_stocks"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="2dp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_2sdp"
                 android:src="@drawable/search_stock" />
 
             <EditText
                 android:id="@+id/etStocks"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_stocks"
                 android:hint="BBSA3"
                 android:textColor="@color/white"
                 android:textColorHint="@color/greyClean"
                 android:textStyle="bold" />
-
         </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu2"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="@dimen/_10sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -217,24 +220,22 @@
 
             <ImageView
                 android:id="@+id/icon_crypto"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="2dp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_2sdp"
                 android:src="@drawable/search_crypto" />
 
             <EditText
                 android:id="@+id/edCrypto"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_crypto"
                 android:hint="BTH"
                 android:textColor="@color/white"
                 android:textColorHint="@color/greyClean"
                 android:textStyle="bold" />
-
-
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
