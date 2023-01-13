@@ -1,5 +1,6 @@
 plugins {
     id (Plugins.application)
+    id (Plugins.kapt)
     kotlin (Plugins.android)
 }
 
@@ -45,4 +46,11 @@ dependencies {
     testImplementation (Dependencies.junit)
     androidTestImplementation (Dependencies.androidxJunit)
     androidTestImplementation (Dependencies.espresso)
+
+    implementation(Dependencies.lifecycle)
+
+    implementation(Dependencies.gson)
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.converterGson)
+
 }
