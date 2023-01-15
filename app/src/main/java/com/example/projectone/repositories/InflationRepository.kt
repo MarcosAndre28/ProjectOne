@@ -1,7 +1,7 @@
 package com.example.projectone.repositories
 
-import com.example.projectone.rest.RetrofitService
+import com.example.projectone.Api.Api
 
-class InflationRepository constructor(private val retrofitService: RetrofitService) {
-    fun getInflation() = retrofitService.getInflation()
+class InflationRepository constructor(private val api: Api) {
+    fun getInflation() = api.getInflation()
 }

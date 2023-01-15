@@ -19,9 +19,10 @@ object Versions{
     const val converterGson = "2.9.0"
     const val glide = "4.12.0"
     const val glideCompiler = "4.12.0"
-
-
-
+    const val okhttp3 = "5.0.0-alpha.10"
+    const val room = "2.4.3"
+    const val coroutines = "1.6.4"
+    const val lifecycleViewmodel = "2.5.1"
 }
 
 object Configs{
@@ -67,16 +68,20 @@ object Dependencies {
     const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationFragment}"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigationUi}"
     const val spd = "com.intuit.sdp:sdp-android:${Versions.spd}"
-
     const val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
-
     const val gson = "com.google.code.gson:gson:${Versions.gson}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val converterGson = "com.squareup.retrofit2:converter-gson:${Versions.converterGson}"
-
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glideCompiler}"
-
+    const val okhttp3 = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp3}"
+    const val room = "androidx.room:room-runtime:${Versions.room}"
+    const val roomRuntime = "androidx.room:room-ktx:${Versions.room}"
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+    const val lifecycleViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewmodel}"
+    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleViewmodel}"
 }
 
 object Classpath{

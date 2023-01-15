@@ -1,4 +1,4 @@
-package com.example.projectone
+package com.example.projectone.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,12 +16,9 @@ import com.example.projectone.Inflation.InflationViewModel
 import com.example.projectone.Inflation.InflationViewModelFactory
 import com.example.projectone.Selic.SelicViewModel
 import com.example.projectone.Selic.SelicViewModelFactory
-import com.example.projectone.repositories.CryptoRepository
 import com.example.projectone.repositories.InflationRepository
 import com.example.projectone.repositories.SelicRepository
-import com.example.projectone.rest.RetrofitService
-import com.example.projectone.viewmodel.crypto.CryptoViewModel
-import com.example.projectone.viewmodel.crypto.CryptoViewModelFactory
+import com.example.projectone.Api.RetrofitInstance
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    private val retrofitService = RetrofitService.getInstance()
+    private val api = RetrofitInstance.api
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,12 +45,12 @@ class MainActivity : AppCompatActivity() {
         setupWithNavController(bottomNavigationView, navController)
 
         viewModelInflation =
-            ViewModelProvider(this, InflationViewModelFactory(InflationRepository(retrofitService))).get(
+            ViewModelProvider(this, InflationViewModelFactory(InflationRepository(api))).get(
                 InflationViewModel::class.java
             )
 
         viewModelSelic =
-            ViewModelProvider(this, SelicViewModelFactory(SelicRepository(retrofitService))).get(
+            ViewModelProvider(this, SelicViewModelFactory(SelicRepository(api))).get(
                 SelicViewModel::class.java
             )
 

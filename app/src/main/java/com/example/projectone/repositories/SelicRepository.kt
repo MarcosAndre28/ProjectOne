@@ -1,7 +1,7 @@
 package com.example.projectone.repositories
 
-import com.example.projectone.rest.RetrofitService
+import com.example.projectone.Api.Api
 
-class SelicRepository constructor(private val retrofitService: RetrofitService) {
-    fun getSelic() = retrofitService.getSelic()
+class SelicRepository constructor(private val api: Api) {
+    fun getSelic() = api.getSelic()
 }

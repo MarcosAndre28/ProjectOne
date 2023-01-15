@@ -1,7 +1,7 @@
 package com.example.projectone.repositories
 
-import com.example.projectone.rest.RetrofitService
+import com.example.projectone.Api.Api
 
-class TickerRepository constructor(private val retrofitService: RetrofitService) {
-    fun getTicker() = retrofitService.getTicker()
+class TickerRepository constructor(private val api: Api) {
+    fun getTicker() = api.getTicker()
 }

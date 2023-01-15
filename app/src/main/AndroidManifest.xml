@@ -15,7 +15,7 @@
         android:theme="@style/Theme.ProjectOne"
         tools:targetApi="31">
         <activity
-            android:name="com.example.projectone.MainActivity"
+            android:name="com.example.projectone.view.MainActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

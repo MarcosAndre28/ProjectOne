@@ -1,3 +1,5 @@
+import Plugins.kapt
+
 plugins {
     id (Plugins.application)
     id (Plugins.kapt)
@@ -36,24 +38,53 @@ android {
 }
 
 dependencies {
+
+   // Core
     implementation (Dependencies.androidx)
+
+    // AppCompat
     implementation (Dependencies.appcompat)
+
+    // Material
     implementation (Dependencies.material)
+
+    // Layout
     implementation (Dependencies.constraintLayout)
+
+    // Navigation
     implementation(Dependencies.navigationFragment)
     implementation(Dependencies.navigationUi)
+
+    // Screen
     implementation(Dependencies.spd)
+
+    // Test
     testImplementation (Dependencies.junit)
     androidTestImplementation (Dependencies.androidxJunit)
     androidTestImplementation (Dependencies.espresso)
 
-    implementation(Dependencies.lifecycle)
-
+    // Retrofit
     implementation(Dependencies.gson)
     implementation(Dependencies.retrofit)
     implementation(Dependencies.converterGson)
+    implementation(Dependencies.okhttp3)
 
+    // Glide
     implementation(Dependencies.glide)
     kapt(Dependencies.glideCompiler)
+
+    // Room
+    implementation(Dependencies.room)
+    kapt(Dependencies.roomCompiler)
+    implementation(Dependencies.roomRuntime)
+
+    // Coroutines
+    implementation(Dependencies.coroutinesCore)
+    implementation(Dependencies.coroutines)
+
+    // LifeCycle
+    implementation(Dependencies.lifecycleViewmodel)
+    implementation(Dependencies.lifecycleRuntime)
+    implementation(Dependencies.lifecycle)
 
 }
