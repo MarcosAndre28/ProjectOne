@@ -17,6 +17,8 @@ object Versions{
     const val gson = "2.8.6"
     const val retrofit = "2.9.0"
     const val converterGson = "2.9.0"
+    const val glide = "4.12.0"
+    const val glideCompiler = "4.12.0"
 
 
 
@@ -69,8 +71,11 @@ object Dependencies {
     const val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
 
     const val gson = "com.google.code.gson:gson:${Versions.gson}"
-    const val retrofit = "com.squareup.retrofit2:${Versions.retrofit}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val converterGson = "com.squareup.retrofit2:converter-gson:${Versions.converterGson}"
+
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glideCompiler}"
 
 }
 

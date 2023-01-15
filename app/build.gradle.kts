@@ -53,4 +53,7 @@ dependencies {
     implementation(Dependencies.retrofit)
     implementation(Dependencies.converterGson)
 
+    implementation(Dependencies.glide)
+    kapt(Dependencies.glideCompiler)
+
 }
