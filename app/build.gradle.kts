@@ -1,5 +1,6 @@
 plugins {
     id (Plugins.application)
+    id (Plugins.kapt)
     kotlin (Plugins.android)
 }
 
@@ -29,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = KotlinOptions.jvmTarget
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -36,7 +40,17 @@ dependencies {
     implementation (Dependencies.appcompat)
     implementation (Dependencies.material)
     implementation (Dependencies.constraintLayout)
+    implementation(Dependencies.navigationFragment)
+    implementation(Dependencies.navigationUi)
+    implementation(Dependencies.spd)
     testImplementation (Dependencies.junit)
     androidTestImplementation (Dependencies.androidxJunit)
     androidTestImplementation (Dependencies.espresso)
+
+    implementation(Dependencies.lifecycle)
+
+    implementation(Dependencies.gson)
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.converterGson)
+
 }

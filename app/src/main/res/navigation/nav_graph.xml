@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_crypto"
+        tools:layout="@layout/crypto_fragment"
+        android:name="com.example.projectone.view.fragments.CryptoFragment"
+        android:label="CryptoFragment" />
+    <fragment
+        android:id="@+id/navigation_home"
+        tools:layout="@layout/fragment_home"
+        android:name="com.example.projectone.view.fragments.FragmentHome"
+        android:label="FragmentHome" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_crypto"
+            app:destination="@id/navigation_crypto" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_ticker"
+            app:destination="@id/navigation_ticker" />
+        <action
+            android:id="@+id/action_navigation_home_to_favoritesFragment"
+            app:destination="@id/navigation_favorites" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_ticker"
+        tools:layout="@layout/ticker_fragment"
+        android:name="com.example.projectone.view.fragments.TickerFragment"
+        android:label="TickerFragment" />
+    <fragment
+        android:id="@+id/navigation_favorites"
+        tools:layout="@layout/favorites_fragment"
+        android:name="com.example.projectone.view.fragments.FavoritesFragment"
+        android:label="FavoritesFragment" />
+</navigation>

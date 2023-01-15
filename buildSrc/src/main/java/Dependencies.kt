@@ -10,6 +10,16 @@ object Versions{
     const val espresso = "3.5.0"
     const val androidTools = "7.3.1"
     const val jetbrainsKotlin = "1.7.10"
+    const val navigationFragment = "2.5.3"
+    const val navigationUi = "2.5.3"
+    const val spd = "1.1.0"
+    const val lifecycle = "2.2.0"
+    const val gson = "2.8.6"
+    const val retrofit = "2.9.0"
+    const val converterGson = "2.9.0"
+
+
+
 }
 
 object Configs{
@@ -26,6 +36,7 @@ object Configs{
 object Plugins{
     const val application = "com.android.application"
     const val android = "android"
+    const val kapt = "kotlin-kapt"
 }
 
 object BuildTypes {
@@ -51,6 +62,16 @@ object Dependencies {
     const val junit = "junit:junit:${Versions.junit}"
     const val androidxJunit = "androidx.test.ext:junit:${Versions.androidxJunit}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationFragment}"
+    const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigationUi}"
+    const val spd = "com.intuit.sdp:sdp-android:${Versions.spd}"
+
+    const val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+
+    const val gson = "com.google.code.gson:gson:${Versions.gson}"
+    const val retrofit = "com.squareup.retrofit2:${Versions.retrofit}"
+    const val converterGson = "com.squareup.retrofit2:converter-gson:${Versions.converterGson}"
+
 }
 
 object Classpath{
