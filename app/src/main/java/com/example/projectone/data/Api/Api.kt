@@ -18,7 +18,7 @@ interface Api {
     fun getCurrency(): Call<List<CurrencyModel>>
 
     @GET("api/v2/inflation")
-    fun getInflation(): Call<InflationModel>
+    suspend fun getInflation(): Response<Inflation>
 
     @GET("api/v2/prime-rate")
     suspend fun getSelic(): Response<SelicRate>

@@ -12,22 +12,15 @@ import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.onNavDestinationSelected
 import com.example.kotlindls.R
 import com.example.kotlindls.databinding.ActivityMainBinding
-import com.example.projectone.Inflation.InflationViewModel
-import com.example.projectone.Inflation.InflationViewModelFactory
+import com.example.projectone.data.viewModel.InflationViewModel
 import com.example.projectone.data.viewModel.SelicViewModel
 import com.example.projectone.data.repositories.InflationRepository
-import com.example.projectone.data.repositories.SelicRepository
 import com.example.projectone.data.Api.RetrofitInstance
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-
-    private lateinit var viewModelInflation: InflationViewModel
-    private lateinit var viewModelSelic: SelicViewModel
-
-
 
     private val api = RetrofitInstance.api
 
@@ -43,18 +36,10 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = binding.bottomNavigation
         setupWithNavController(bottomNavigationView, navController)
 
-        viewModelInflation =
-            ViewModelProvider(this, InflationViewModelFactory(InflationRepository(api))).get(
-                InflationViewModel::class.java
-            )
-
-
     }
 
     override fun onResume() {
         super.onResume()
-        viewModelInflation.getInflation()
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
