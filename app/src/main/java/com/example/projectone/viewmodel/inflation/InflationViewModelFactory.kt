@@ -2,7 +2,7 @@ package com.example.projectone.Inflation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.projectone.repositories.InflationRepository
+import com.example.projectone.data.repositories.InflationRepository
 
 class InflationViewModelFactory constructor(private val repository: InflationRepository) :
     ViewModelProvider.Factory {

@@ -14,11 +14,10 @@ import com.example.kotlindls.R
 import com.example.kotlindls.databinding.ActivityMainBinding
 import com.example.projectone.Inflation.InflationViewModel
 import com.example.projectone.Inflation.InflationViewModelFactory
-import com.example.projectone.Selic.SelicViewModel
-import com.example.projectone.Selic.SelicViewModelFactory
-import com.example.projectone.repositories.InflationRepository
-import com.example.projectone.repositories.SelicRepository
-import com.example.projectone.Api.RetrofitInstance
+import com.example.projectone.data.viewModel.SelicViewModel
+import com.example.projectone.data.repositories.InflationRepository
+import com.example.projectone.data.repositories.SelicRepository
+import com.example.projectone.data.Api.RetrofitInstance
 
 class MainActivity : AppCompatActivity() {
 
@@ -49,17 +48,11 @@ class MainActivity : AppCompatActivity() {
                 InflationViewModel::class.java
             )
 
-        viewModelSelic =
-            ViewModelProvider(this, SelicViewModelFactory(SelicRepository(api))).get(
-                SelicViewModel::class.java
-            )
-
 
     }
 
     override fun onResume() {
         super.onResume()
-        viewModelSelic.getSelic()
         viewModelInflation.getInflation()
 
     }

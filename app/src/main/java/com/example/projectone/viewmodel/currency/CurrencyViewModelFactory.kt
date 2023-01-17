@@ -2,7 +2,7 @@ package com.example.projectone.Currency
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.projectone.repositories.CurrencyRepository
+import com.example.projectone.data.repositories.CurrencyRepository
 
 class CurrencyViewModelFactory constructor(private val repository: CurrencyRepository) :
     ViewModelProvider.Factory {

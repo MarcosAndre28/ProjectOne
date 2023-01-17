@@ -2,8 +2,8 @@ package com.example.projectone.Currency
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.projectone.models.CurrencyModel
-import com.example.projectone.repositories.CurrencyRepository
+import com.example.projectone.data.models.CurrencyModel
+import com.example.projectone.data.repositories.CurrencyRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

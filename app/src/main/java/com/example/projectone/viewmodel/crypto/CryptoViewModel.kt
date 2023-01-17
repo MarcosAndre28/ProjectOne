@@ -2,8 +2,8 @@ package com.example.projectone.viewmodel.crypto
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.projectone.models.CryptoModel
-import com.example.projectone.repositories.CryptoRepository
+import com.example.projectone.data.models.CryptoModel
+import com.example.projectone.data.repositories.CryptoRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

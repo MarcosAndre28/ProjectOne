@@ -2,8 +2,8 @@ package com.example.projectone.Ticker
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.projectone.models.TickerModel
-import com.example.projectone.repositories.TickerRepository
+import com.example.projectone.data.models.TickerModel
+import com.example.projectone.data.repositories.TickerRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

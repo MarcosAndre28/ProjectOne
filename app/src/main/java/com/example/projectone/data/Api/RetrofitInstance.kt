@@ -1,4 +1,4 @@
-package com.example.projectone.Api
+package com.example.projectone.data.Api
 
 import com.example.projectone.utils.Constants.Companion.BASE_URL
 import okhttp3.OkHttpClient

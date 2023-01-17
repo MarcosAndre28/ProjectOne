@@ -2,7 +2,7 @@ package com.example.projectone.Ticker
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.projectone.repositories.TickerRepository
+import com.example.projectone.data.repositories.TickerRepository
 
 class TickerViewModelFactory constructor(private val repository: TickerRepository) :
     ViewModelProvider.Factory {

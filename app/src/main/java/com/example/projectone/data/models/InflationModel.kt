@@ -1,6 +1,6 @@
-package com.example.projectone.models
+package com.example.projectone.data.models
 
-data class SelicModel(
+data class InflationModel(
     val date: String,
     val value: String,
     val epochDate: Long

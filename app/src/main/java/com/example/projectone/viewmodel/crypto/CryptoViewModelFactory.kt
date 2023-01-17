@@ -2,7 +2,7 @@ package com.example.projectone.viewmodel.crypto
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.projectone.repositories.CryptoRepository
+import com.example.projectone.data.repositories.CryptoRepository
 
 class CryptoViewModelFactory constructor(private val repository: CryptoRepository) :
     ViewModelProvider.Factory {

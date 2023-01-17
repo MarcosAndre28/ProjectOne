@@ -1,4 +1,4 @@
-package com.example.projectone.models
+package com.example.projectone.data.models
 
 data class TickerModel(
     val stock: String,
