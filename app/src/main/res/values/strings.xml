@@ -3,6 +3,8 @@
     <string name="home_menu">Home</string>
     <string name="crypto_menu">Crypto</string>
     <string name="ticker_menu">Ticker</string>
+    <string name="crypto_List">Crypto List</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="favorite">Favoritos</string>

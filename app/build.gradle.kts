@@ -87,4 +87,10 @@ dependencies {
     implementation(Dependencies.lifecycleRuntime)
     implementation(Dependencies.lifecycle)
 
+    // Card View
+    implementation(Dependencies.cardView)
+
+    // Recycler View
+    implementation(Dependencies.recyclerView)
+
 }
