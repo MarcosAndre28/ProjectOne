@@ -92,4 +92,10 @@ dependencies {
 
     // Kotlin flow
     implementation(Dependencies.flow)
+    // Card View
+    implementation(Dependencies.cardView)
+
+    // Recycler View
+    implementation(Dependencies.recyclerView)
+
 }

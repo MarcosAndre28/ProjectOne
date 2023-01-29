@@ -12,6 +12,7 @@ import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.onNavDestinationSelected
 import com.example.kotlindls.R
 import com.example.kotlindls.databinding.ActivityMainBinding
+import com.example.projectone.adapter.CryptoAdapter
 import com.example.projectone.data.viewModel.InflationViewModel
 import com.example.projectone.data.viewModel.SelicViewModel
 import com.example.projectone.data.repositories.InflationRepository
