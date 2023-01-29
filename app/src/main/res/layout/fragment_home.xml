@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_theme"
@@ -11,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20sdp"
         android:gravity="center"
-        android:text="Ultima atualização 08/01/2023"
+        android:text="@string/update"
         android:textColor="@color/white"
         android:textSize="@dimen/_15sdp" />
 
@@ -27,14 +30,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/icon_dollar"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:padding="@dimen/_2sdp"
-                android:src="@drawable/dollar" />
+                android:src="@drawable/dollar"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tvDollar"
@@ -43,9 +48,9 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_dollar"
-                android:text="Dolar:   R$ 5,215"
-                android:textSize="@dimen/_15sdp"
+                android:text="@string/dolar"
                 android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
@@ -63,14 +68,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/icon_euro"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:padding="@dimen/_2sdp"
-                android:src="@drawable/euro" />
+                android:src="@drawable/euro"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tvEuro"
@@ -79,9 +86,10 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_euro"
-                android:text="Dolar em Euro:   $ 1,215"
-                android:textSize="@dimen/_15sdp"
+                android:textColorHint="@color/white"
+                android:hint="@string/dolar_em_euro"
                 android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
@@ -99,14 +107,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/icon_inflation"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:padding="@dimen/_2sdp"
-                android:src="@drawable/inflation" />
+                android:src="@drawable/inflation"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tvInflation"
@@ -115,9 +125,10 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_inflation"
-                android:text="Infação:   6.47 %"
-                android:textSize="@dimen/_15sdp"
+                android:textColorHint="@color/white"
+                android:hint="@string/infa"
                 android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
@@ -134,15 +145,19 @@
         android:padding="@dimen/_10sdp">
 
         <RelativeLayout
+            android:id="@+id/viewData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
 
             <ImageView
                 android:id="@+id/icon_selic"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:padding="@dimen/_2sdp"
-                android:src="@drawable/selic" />
+                android:src="@drawable/selic"
+                tools:ignore="ContentDescription" />
+
 
             <TextView
                 android:id="@+id/tvSelic"
@@ -151,11 +166,11 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_selic"
-                android:text="Selic : 13,25 %"
-                android:textSize="@dimen/_15sdp"
+                android:hint="@string/selic"
+                android:textColorHint="@color/white"
                 android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
-
         </RelativeLayout>
     </LinearLayout>
 
@@ -165,7 +180,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
         android:gravity="center"
-        android:text="Pesquisar"
+        android:text="@string/search"
         android:textColor="@color/white"
         android:textSize="@dimen/_22sdp" />
 
@@ -181,14 +196,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/icon_stocks"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:padding="@dimen/_2sdp"
-                android:src="@drawable/search_stock" />
+                android:src="@drawable/search_stock"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/etStocks"
@@ -197,10 +214,11 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_stocks"
-                android:hint="BBSA3"
+                android:hint="@string/bbsa3"
                 android:textColor="@color/white"
                 android:textColorHint="@color/greyClean"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="Autofill,TextFields" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -216,14 +234,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/icon_crypto"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:padding="@dimen/_2sdp"
-                android:src="@drawable/search_crypto" />
+                android:src="@drawable/search_crypto"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/edCrypto"
@@ -232,10 +252,11 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_toEndOf="@id/icon_crypto"
-                android:hint="BTH"
+                android:hint="@string/bth"
                 android:textColor="@color/white"
                 android:textColorHint="@color/greyClean"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="Autofill,TextFields" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

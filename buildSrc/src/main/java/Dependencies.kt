@@ -23,6 +23,8 @@ object Versions{
     const val room = "2.4.3"
     const val coroutines = "1.6.4"
     const val lifecycleViewmodel = "2.5.1"
+    const val timber = "4.7.1"
+    const val flow = "2.3.0-alpha05"
 }
 
 object Configs{
@@ -82,6 +84,8 @@ object Dependencies {
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
     const val lifecycleViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewmodel}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleViewmodel}"
+    const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+    const val flow =  "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.flow}"
 }
 
 object Classpath{

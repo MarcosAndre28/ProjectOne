@@ -87,4 +87,9 @@ dependencies {
     implementation(Dependencies.lifecycleRuntime)
     implementation(Dependencies.lifecycle)
 
+    // Timber logging
+    implementation(Dependencies.timber)
+
+    // Kotlin flow
+    implementation(Dependencies.flow)
 }

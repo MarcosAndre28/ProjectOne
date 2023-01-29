@@ -6,4 +6,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="favorite">Favoritos</string>
+    <string name="infa">Infação: 6.47 %</string>
+    <string name="dolar_em_euro">Dolar em Euro: $ 1,215</string>
+    <string name="dolar">Dolar: R$ 5,215</string>
+    <string name="update">Ultima atualização 08/01/2023</string>
+    <string name="search">Pesquisar</string>
+    <string name="bbsa3">BBSA3</string>
+    <string name="bth">BTH</string>
+    <string name="selic">Selic : 13,25 %</string>
 </resources>
