@@ -1,17 +1,12 @@
 package com.example.projectone.data.viewModel
 
 import android.app.Application
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
-import com.example.projectone.data.Api.ApiError
 import com.example.projectone.data.models.SelicRate
 import com.example.projectone.data.repositories.SelicRepository
 import com.example.projectone.db.AppDatabase
-import com.example.projectone.db.model.Selic
+import com.example.projectone.db.model.SelicModel
 import com.example.projectone.data.Api.ApiResult
 import com.example.projectone.utils.ApiErrorUtils
 import kotlinx.coroutines.CoroutineScope
@@ -20,8 +15,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 import timber.log.Timber
-import java.nio.file.Files
-import java.nio.file.Files.exists
 
 
 class SelicViewModel(application: Application): AndroidViewModel(application) {
@@ -45,13 +38,13 @@ class SelicViewModel(application: Application): AndroidViewModel(application) {
                     emit(ApiResult.Success(selicRate))
 
                     selicRate!!.primeRate.forEach{rate ->
-                        val selic = Selic(id = 0, epochDate =rate.epochDate, date = rate.date, value=  rate.value)
+                        val selicModel = SelicModel(id = 0, epochDate =rate.epochDate, date = rate.date, value=  rate.value)
                         val exists = repository.selicExists() > 0
                         if(exists){
-                            repository.update(selic)
+                            repository.update(selicModel)
                         }
                         else{
-                            repository.insert(selic)
+                            repository.insert(selicModel)
                         }
                     }
                 } else {
@@ -66,25 +59,13 @@ class SelicViewModel(application: Application): AndroidViewModel(application) {
     }
 
     // DB
-    fun update(selic: Selic){
+    fun delete(selicModel: SelicModel){
         viewModelScope.launch(Dispatchers.IO){
-            repository.update(selic)
+            repository.delete(selicModel)
         }
     }
 
-    fun insert(selic: Selic){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.insert(selic)
-        }
-    }
-
-    fun delete(selic: Selic){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.delete(selic)
-        }
-    }
-
-    fun getSelicDB(): LiveData<Selic>{
+    fun getSelicDB(): LiveData<SelicModel>{
         return repository.getSelicDb()
     }
 }

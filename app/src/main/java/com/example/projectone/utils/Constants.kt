@@ -7,5 +7,6 @@ class Constants {
         const val DATABASE_NAME = "ProjectOne"
 
         const val SELIC = "selic"
+        const val INFLATION = "inflation"
     }
 }

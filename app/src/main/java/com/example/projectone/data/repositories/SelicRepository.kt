@@ -3,11 +3,9 @@ package com.example.projectone.data.repositories
 import androidx.lifecycle.LiveData
 import com.example.projectone.data.Api.RetrofitInstance
 import com.example.projectone.data.models.SelicRate
-import com.example.projectone.data.viewModel.SelicViewModel
 import com.example.projectone.db.dao.SelicDao
-import com.example.projectone.db.model.Selic
+import com.example.projectone.db.model.SelicModel
 import retrofit2.Response
-import retrofit2.await
 
 class SelicRepository(private val selicDao: SelicDao){
     private val api = RetrofitInstance.api
@@ -16,24 +14,23 @@ class SelicRepository(private val selicDao: SelicDao){
         return api.getSelic()
     }
 
-    suspend fun insert(selic: Selic){
-        selicDao.insert(selic)
+    suspend fun insert(selicModel: SelicModel){
+        selicDao.insert(selicModel)
     }
 
     suspend fun selicExists(): Int {
         return selicDao.selicCount()
     }
 
-    suspend fun update(selic: Selic){
-        selicDao.update(selic)
+    suspend fun update(selicModel: SelicModel){
+        selicDao.update(selicModel)
     }
 
-    suspend fun delete(selic: Selic){
-        selicDao.delete(selic)
+    suspend fun delete(selicModel: SelicModel){
+        selicDao.delete(selicModel)
     }
 
-    fun getSelicDb(): LiveData<Selic> {
+    fun getSelicDb(): LiveData<SelicModel> {
         return selicDao.getSelic()
     }
-
 }
