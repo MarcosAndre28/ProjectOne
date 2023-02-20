@@ -1,14 +1,10 @@
 package com.example.projectone.data.repositories
 
 import androidx.lifecycle.LiveData
-import com.example.projectone.data.Api.Api
 import com.example.projectone.data.Api.RetrofitInstance
 import com.example.projectone.data.models.Inflation
-import com.example.projectone.data.models.SelicRate
 import com.example.projectone.db.dao.InflationDao
-import com.example.projectone.db.dao.SelicDao
 import com.example.projectone.db.model.InflationModelDB
-import com.example.projectone.db.model.SelicModel
 import retrofit2.Response
 
 class InflationRepository(private val inflationDao: InflationDao){

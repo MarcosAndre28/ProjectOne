@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 import com.example.projectone.utils.Constants.Companion.SELIC
 
 @Entity(tableName = SELIC)
-data class SelicModel(
+data class SelicModelDB(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")

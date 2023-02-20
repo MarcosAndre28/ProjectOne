@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import com.example.projectone.data.models.SelicRate
 import com.example.projectone.data.repositories.SelicRepository
 import com.example.projectone.db.AppDatabase
-import com.example.projectone.db.model.SelicModel
+import com.example.projectone.db.model.SelicModelDB
 import com.example.projectone.data.Api.ApiResult
 import com.example.projectone.utils.ApiErrorUtils
 import kotlinx.coroutines.CoroutineScope
@@ -38,13 +38,13 @@ class SelicViewModel(application: Application): AndroidViewModel(application) {
                     emit(ApiResult.Success(selicRate))
 
                     selicRate!!.primeRate.forEach{rate ->
-                        val selicModel = SelicModel(id = 0, epochDate =rate.epochDate, date = rate.date, value=  rate.value)
+                        val selicModelDB = SelicModelDB(id = 0, epochDate =rate.epochDate, date = rate.date, value=  rate.value)
                         val exists = repository.selicExists() > 0
                         if(exists){
-                            repository.update(selicModel)
+                            repository.update(selicModelDB)
                         }
                         else{
-                            repository.insert(selicModel)
+                            repository.insert(selicModelDB)
                         }
                     }
                 } else {
@@ -59,13 +59,13 @@ class SelicViewModel(application: Application): AndroidViewModel(application) {
     }
 
     // DB
-    fun delete(selicModel: SelicModel){
+    fun delete(selicModelDB: SelicModelDB){
         viewModelScope.launch(Dispatchers.IO){
-            repository.delete(selicModel)
+            repository.delete(selicModelDB)
         }
     }
 
-    fun getSelicDB(): LiveData<SelicModel>{
+    fun getSelicDB(): LiveData<SelicModelDB>{
         return repository.getSelicDb()
     }
 }

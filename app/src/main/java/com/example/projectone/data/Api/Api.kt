@@ -8,8 +8,8 @@ import retrofit2.http.GET
 
 interface Api {
 
-    @GET("api/quote/{tickers}")
-    fun getTicker(): Call<List<TickerModel>>
+    @GET("api/quote/list")
+    suspend fun getTicker(): Response<TickerModel>
 
     @GET("api/v2/crypto")
     fun getCrypto(): Call<List<CryptoModel>>

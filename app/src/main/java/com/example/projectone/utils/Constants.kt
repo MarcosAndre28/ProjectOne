@@ -8,5 +8,6 @@ class Constants {
 
         const val SELIC = "selic"
         const val INFLATION = "inflation"
+        const val TICKER = "ticker"
     }
 }

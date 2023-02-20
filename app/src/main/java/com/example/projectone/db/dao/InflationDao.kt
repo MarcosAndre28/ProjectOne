@@ -3,7 +3,6 @@ package com.example.projectone.db.dao
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.projectone.db.model.InflationModelDB
-import com.example.projectone.db.model.SelicModel
 
 @Dao
 interface InflationDao {
