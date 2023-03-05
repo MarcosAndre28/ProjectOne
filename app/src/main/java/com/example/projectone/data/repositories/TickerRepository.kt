@@ -7,6 +7,7 @@ import com.example.projectone.data.models.SelicRate
 import com.example.projectone.data.models.TickerModel
 import com.example.projectone.db.dao.SelicDao
 import com.example.projectone.db.dao.TickerDao
+import com.example.projectone.db.model.InflationModelDB
 import com.example.projectone.db.model.SelicModelDB
 import com.example.projectone.db.model.TickerModelDB
 import retrofit2.Response
@@ -37,4 +38,7 @@ class TickerRepository constructor(private val tickerDao: TickerDao) {
     suspend fun delete(tickerModelDB: TickerModelDB){
         tickerDao.delete(tickerModelDB)
     }
+
+    fun getAllTickers(): LiveData<List<TickerModelDB>> {
+      return   tickerDao.getAllTickers()}
 }

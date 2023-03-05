@@ -12,7 +12,7 @@ import com.example.projectone.db.model.SelicModelDB
 import com.example.projectone.db.model.TickerModelDB
 import com.example.projectone.utils.Constants.Companion.DATABASE_NAME
 
-@Database(entities = arrayOf(SelicModelDB::class, InflationModelDB::class, TickerModelDB::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(SelicModelDB::class, InflationModelDB::class, TickerModelDB::class), version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun SelicDao() : SelicDao

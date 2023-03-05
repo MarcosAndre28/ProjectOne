@@ -8,10 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindls.R
 import com.example.projectone.data.models.CryptoModel
 
-class CryptoAdapter(val cryptos: MutableList<CryptoModel>) :
+class CryptoAdapter(private val cryptos: MutableList<CryptoModel>) :
     RecyclerView.Adapter<CryptoAdapter.CryptoViewHolder>() {
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CryptoViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.crypto_item, parent, false)

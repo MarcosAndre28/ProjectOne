@@ -9,6 +9,7 @@ import com.example.projectone.db.model.SelicModelDB
 import com.example.projectone.data.Api.ApiResult
 import com.example.projectone.data.models.TickerModel
 import com.example.projectone.data.repositories.TickerRepository
+import com.example.projectone.db.model.InflationModelDB
 import com.example.projectone.db.model.TickerModelDB
 import com.example.projectone.utils.ApiErrorUtils
 import kotlinx.coroutines.CoroutineScope
@@ -76,5 +77,9 @@ class TickerViewModel(application: Application) : AndroidViewModel(application) 
         viewModelScope.launch(Dispatchers.IO) {
             repository.delete(tickerModelDB)
         }
+    }
+
+    fun getAllTickers() : LiveData<List<TickerModelDB>>{
+       return repository.getAllTickers()
     }
 }

@@ -23,5 +23,5 @@ interface InflationDao {
     suspend fun delete(inflationModelDB: InflationModelDB)
 
     @Update
-    suspend fun  update(inflationModelDB: InflationModelDB)
+    suspend fun update(inflationModelDB: InflationModelDB)
 }
