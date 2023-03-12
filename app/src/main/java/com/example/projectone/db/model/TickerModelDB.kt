@@ -3,7 +3,6 @@ package com.example.projectone.db.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.projectone.utils.Constants.Companion.SELIC
 import com.example.projectone.utils.Constants.Companion.TICKER
 
 @Entity(tableName = TICKER)
@@ -11,7 +10,7 @@ data class TickerModelDB(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    var id : Long,
+    var id: Long,
 
     @ColumnInfo(name = "change")
     val change: Double,

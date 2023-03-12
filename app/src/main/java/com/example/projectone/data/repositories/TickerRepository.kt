@@ -19,7 +19,7 @@ class TickerRepository constructor(private val tickerDao: TickerDao) {
         return api.getTicker()
     }
 
-    suspend fun insert(tickerModels: List<TickerModelDB>){
+    suspend fun insert(tickerModels: List<TickerModelDB>) {
         tickerModels.forEach { tickerModel ->
             tickerDao.insert(tickerModel)
         }
@@ -35,10 +35,11 @@ class TickerRepository constructor(private val tickerDao: TickerDao) {
         }
     }
 
-    suspend fun delete(tickerModelDB: TickerModelDB){
+    suspend fun delete(tickerModelDB: TickerModelDB) {
         tickerDao.delete(tickerModelDB)
     }
 
     fun getAllTickers(): LiveData<List<TickerModelDB>> {
-      return   tickerDao.getAllTickers()}
+        return tickerDao.getAllTickers()
+    }
 }

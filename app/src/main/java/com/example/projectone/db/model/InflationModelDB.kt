@@ -6,11 +6,11 @@ import androidx.room.PrimaryKey
 import com.example.projectone.utils.Constants
 
 @Entity(tableName = Constants.INFLATION)
-class InflationModelDB (
+class InflationModelDB(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    var id : Long,
+    var id: Long,
 
     @ColumnInfo(name = "date")
     val date: String,

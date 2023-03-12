@@ -7,14 +7,14 @@ import com.example.projectone.db.dao.SelicDao
 import com.example.projectone.db.model.SelicModelDB
 import retrofit2.Response
 
-class SelicRepository(private val selicDao: SelicDao){
+class SelicRepository(private val selicDao: SelicDao) {
     private val api = RetrofitInstance.api
 
     suspend fun getSelic(): Response<SelicRate> {
         return api.getSelic()
     }
 
-    suspend fun insert(selicModelDB: SelicModelDB){
+    suspend fun insert(selicModelDB: SelicModelDB) {
         selicDao.insert(selicModelDB)
     }
 
@@ -22,11 +22,11 @@ class SelicRepository(private val selicDao: SelicDao){
         return selicDao.selicCount()
     }
 
-    suspend fun update(selicModelDB: SelicModelDB){
+    suspend fun update(selicModelDB: SelicModelDB) {
         selicDao.update(selicModelDB)
     }
 
-    suspend fun delete(selicModelDB: SelicModelDB){
+    suspend fun delete(selicModelDB: SelicModelDB) {
         selicDao.delete(selicModelDB)
     }
 

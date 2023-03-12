@@ -1,18 +1,22 @@
 package com.example.projectone.data.models
 
 data class CryptoModel(
+    val coins: List<Coin>
+)
+
+data class Coin(
     val currency: String,
     val currencyRateFromUSD: Double,
     val coinName: String,
-    var coin: String,
+    val coin: String,
     val regularMarketChange: Double,
     val regularMarketPrice: Double,
     val regularMarketChangePercent: Double,
     val regularMarketDayLow: Double,
     val regularMarketDayHigh: Double,
-    var regularMarketDayRange: String,
+    val regularMarketDayRange: String,
     val regularMarketVolume: Double,
     val marketCap: Double,
     val regularMarketTime: Long,
-    val coinImageURL: String
+    val coinImageUrl: String
 )

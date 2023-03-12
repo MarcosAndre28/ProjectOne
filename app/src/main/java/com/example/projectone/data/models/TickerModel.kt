@@ -3,6 +3,7 @@ package com.example.projectone.data.models
 data class TickerModel(
     val stocks: List<Stock>
 )
+
 data class Stock(
     val change: Double,
     val close: Double,

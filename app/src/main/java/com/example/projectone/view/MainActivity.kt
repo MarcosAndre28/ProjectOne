@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -12,10 +11,6 @@ import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.onNavDestinationSelected
 import com.example.kotlindls.R
 import com.example.kotlindls.databinding.ActivityMainBinding
-import com.example.projectone.adapter.CryptoAdapter
-import com.example.projectone.data.viewModel.InflationViewModel
-import com.example.projectone.data.viewModel.SelicViewModel
-import com.example.projectone.data.repositories.InflationRepository
 import com.example.projectone.data.Api.RetrofitInstance
 
 class MainActivity : AppCompatActivity() {

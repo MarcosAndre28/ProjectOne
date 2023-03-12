@@ -2,9 +2,6 @@ package com.example.projectone.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.projectone.data.models.TickerModel
-import com.example.projectone.db.model.InflationModelDB
-import com.example.projectone.db.model.SelicModelDB
 import com.example.projectone.db.model.TickerModelDB
 
 @Dao

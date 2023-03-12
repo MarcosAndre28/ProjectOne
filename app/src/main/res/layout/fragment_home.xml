@@ -12,7 +12,7 @@
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_50sdp"
         android:gravity="center"
         android:text="@string/update"
         android:textColor="@color/white"
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu1"
         android:orientation="vertical"
@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu1"
         android:orientation="vertical"
@@ -99,7 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu1"
         android:orientation="vertical"
@@ -138,7 +138,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/round_back_menu1"
         android:orientation="vertical"
@@ -171,92 +171,6 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textViewSearch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:gravity="center"
-        android:text="@string/search"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_22sdp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:background="@drawable/round_back_menu2"
-        android:orientation="vertical"
-        android:padding="@dimen/_10sdp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="UselessParent">
-
-            <ImageView
-                android:id="@+id/icon_stocks"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:padding="@dimen/_2sdp"
-                android:src="@drawable/search_stock"
-                tools:ignore="ContentDescription" />
-
-            <EditText
-                android:id="@+id/etStocks"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_toEndOf="@id/icon_stocks"
-                android:hint="@string/bbsa3"
-                android:textColor="@color/white"
-                android:textColorHint="@color/greyClean"
-                android:textStyle="bold"
-                tools:ignore="Autofill,TextFields" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:background="@drawable/round_back_menu2"
-        android:orientation="vertical"
-        android:padding="@dimen/_10sdp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="UselessParent">
-
-            <ImageView
-                android:id="@+id/icon_crypto"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:padding="@dimen/_2sdp"
-                android:src="@drawable/search_crypto"
-                tools:ignore="ContentDescription" />
-
-            <EditText
-                android:id="@+id/edCrypto"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_toEndOf="@id/icon_crypto"
-                android:hint="@string/bth"
-                android:textColor="@color/white"
-                android:textColorHint="@color/greyClean"
-                android:textStyle="bold"
-                tools:ignore="Autofill,TextFields" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

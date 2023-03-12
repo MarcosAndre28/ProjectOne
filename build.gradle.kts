@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath(Classpath.androidTools)
         classpath(Classpath.jetbrainsKotlin)
+        classpath(Classpath.gradle)
     }
 }
 tasks.register("clean",Delete::class){

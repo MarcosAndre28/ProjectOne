@@ -7,14 +7,14 @@ import com.example.projectone.db.dao.InflationDao
 import com.example.projectone.db.model.InflationModelDB
 import retrofit2.Response
 
-class InflationRepository(private val inflationDao: InflationDao){
+class InflationRepository(private val inflationDao: InflationDao) {
     private val api = RetrofitInstance.api
 
     suspend fun getInflation(): Response<Inflation> {
         return api.getInflation()
     }
 
-    suspend fun insert(inflationModelDB: InflationModelDB){
+    suspend fun insert(inflationModelDB: InflationModelDB) {
         inflationDao.insert(inflationModelDB)
     }
 
@@ -22,7 +22,7 @@ class InflationRepository(private val inflationDao: InflationDao){
         return inflationDao.inflationCount()
     }
 
-    suspend fun update(inflationModelDB: InflationModelDB){
+    suspend fun update(inflationModelDB: InflationModelDB) {
         inflationDao.update(inflationModelDB)
     }
 

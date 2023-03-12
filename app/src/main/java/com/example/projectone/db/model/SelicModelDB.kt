@@ -10,7 +10,7 @@ data class SelicModelDB(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    var id : Long,
+    var id: Long,
 
     @ColumnInfo(name = "date")
     val date: String,

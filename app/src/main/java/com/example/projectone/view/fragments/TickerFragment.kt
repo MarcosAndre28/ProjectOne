@@ -38,18 +38,12 @@ class TickerFragment : BaseFragment<TickerFragmentBinding>(){
         tickerViewModel = ViewModelProvider(this)[TickerViewModel::class.java]
         tickerViewModel.getAllTickers().observe(viewLifecycleOwner){ticker ->
             binding.apply {
-                recyclerView.layoutManager = LinearLayoutManager(requireContext())
-                recyclerView.setHasFixedSize(true)
-
+                recyclerViewTicker.layoutManager = LinearLayoutManager(requireContext())
+                recyclerViewTicker.setHasFixedSize(true)
 
                 val adapter = TickerAdapter(ticker)
-                recyclerView.adapter = adapter
+                recyclerViewTicker.adapter = adapter
             }
-
         }
-
-
-
     }
-
 }

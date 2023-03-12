@@ -12,7 +12,7 @@ interface Api {
     suspend fun getTicker(): Response<TickerModel>
 
     @GET("api/v2/crypto")
-    fun getCrypto(): Call<List<CryptoModel>>
+    fun getCrypto(): Response<CryptoModel>
 
     @GET("api/v2/currency")
     fun getCurrency(): Call<List<CurrencyModel>>

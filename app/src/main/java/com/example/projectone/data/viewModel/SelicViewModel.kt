@@ -17,14 +17,14 @@ import kotlinx.coroutines.launch
 import timber.log.Timber
 
 
-class SelicViewModel(application: Application): AndroidViewModel(application) {
+class SelicViewModel(application: Application) : AndroidViewModel(application) {
 
-    var repository : SelicRepository
+    var repository: SelicRepository
     private val viewModelScope = CoroutineScope(Dispatchers.Main)
 
     init {
         val selicDao = AppDatabase.getAppDatabase(application).SelicDao()
-        repository =  SelicRepository(selicDao)
+        repository = SelicRepository(selicDao)
     }
 
     // API
@@ -37,13 +37,17 @@ class SelicViewModel(application: Application): AndroidViewModel(application) {
                     val selicRate = response.body()
                     emit(ApiResult.Success(selicRate))
 
-                    selicRate!!.primeRate.forEach{rate ->
-                        val selicModelDB = SelicModelDB(id = 0, epochDate =rate.epochDate, date = rate.date, value=  rate.value)
+                    selicRate!!.primeRate.forEach { rate ->
+                        val selicModelDB = SelicModelDB(
+                            id = 0,
+                            epochDate = rate.epochDate,
+                            date = rate.date,
+                            value = rate.value
+                        )
                         val exists = repository.selicExists() > 0
-                        if(exists){
+                        if (exists) {
                             repository.update(selicModelDB)
-                        }
-                        else{
+                        } else {
                             repository.insert(selicModelDB)
                         }
                     }
@@ -59,13 +63,13 @@ class SelicViewModel(application: Application): AndroidViewModel(application) {
     }
 
     // DB
-    fun delete(selicModelDB: SelicModelDB){
-        viewModelScope.launch(Dispatchers.IO){
+    fun delete(selicModelDB: SelicModelDB) {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.delete(selicModelDB)
         }
     }
 
-    fun getSelicDB(): LiveData<SelicModelDB>{
+    fun getSelicDB(): LiveData<SelicModelDB> {
         return repository.getSelicDb()
     }
 }

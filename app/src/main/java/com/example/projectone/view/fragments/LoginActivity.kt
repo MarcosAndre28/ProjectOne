@@ -7,7 +7,7 @@ import com.example.kotlindls.databinding.SplashActivityBinding
 import com.example.projectone.view.MainActivity
 import com.example.projectone.base.BaseActivity
 
-class LoginActivity : BaseActivity<SplashActivityBinding>(){
+class LoginActivity : BaseActivity<SplashActivityBinding>() {
 
     override fun getViewBinding() = SplashActivityBinding.inflate(layoutInflater)
 
@@ -15,8 +15,8 @@ class LoginActivity : BaseActivity<SplashActivityBinding>(){
         super.onCreate(savedInstanceState)
 
         Handler().postDelayed({
-           startActivity(Intent(this, MainActivity::class.java))
-        },5000)
+            startActivity(Intent(this, MainActivity::class.java))
+        }, 5000)
     }
 
 }

@@ -4,7 +4,7 @@ import com.example.projectone.data.Api.ApiError
 
 class ApiErrorUtils {
     companion object {
-       fun getErrorMessage(code: Int): String {
+        fun getErrorMessage(code: Int): String {
             return when (code) {
                 ApiError.BAD_REQUEST.code -> "Bad Request Error"
                 ApiError.UNAUTHORIZED.code -> "Unauthorized Error"

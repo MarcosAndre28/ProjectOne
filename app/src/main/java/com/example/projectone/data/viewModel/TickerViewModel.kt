@@ -3,13 +3,10 @@ package com.example.projectone.data.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.projectone.data.models.SelicRate
 import com.example.projectone.db.AppDatabase
-import com.example.projectone.db.model.SelicModelDB
 import com.example.projectone.data.Api.ApiResult
 import com.example.projectone.data.models.TickerModel
 import com.example.projectone.data.repositories.TickerRepository
-import com.example.projectone.db.model.InflationModelDB
 import com.example.projectone.db.model.TickerModelDB
 import com.example.projectone.utils.ApiErrorUtils
 import kotlinx.coroutines.CoroutineScope
@@ -79,7 +76,7 @@ class TickerViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    fun getAllTickers() : LiveData<List<TickerModelDB>>{
-       return repository.getAllTickers()
+    fun getAllTickers(): LiveData<List<TickerModelDB>> {
+        return repository.getAllTickers()
     }
 }

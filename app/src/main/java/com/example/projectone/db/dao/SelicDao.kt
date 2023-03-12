@@ -19,10 +19,11 @@ interface SelicDao {
 
     @Query("SELECT 1 FROM selic WHERE id = :id")
     fun exists(id: Long): Boolean
+
     @Delete
     suspend fun delete(selicModelDB: SelicModelDB)
 
     @Update
-    suspend fun  update(selicModelDB: SelicModelDB)
+    suspend fun update(selicModelDB: SelicModelDB)
 
 }

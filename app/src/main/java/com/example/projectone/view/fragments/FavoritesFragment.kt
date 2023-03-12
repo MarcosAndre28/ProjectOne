@@ -9,8 +9,11 @@ import com.example.projectone.base.BaseFragment
 
 class FavoritesFragment : BaseFragment<FavoritesFragmentBinding>() {
 
-    override fun createBinding(inflater: LayoutInflater, container: ViewGroup?): FavoritesFragmentBinding {
-        return FavoritesFragmentBinding.inflate(inflater,container,false)
+    override fun createBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): FavoritesFragmentBinding {
+        return FavoritesFragmentBinding.inflate(inflater, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

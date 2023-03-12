@@ -1,7 +1,7 @@
 package com.example.projectone.utils
 
 class Constants {
-    companion object{
+    companion object {
         const val BASE_URL = "https://brapi.dev/"
 
         const val DATABASE_NAME = "ProjectOne"
@@ -9,5 +9,6 @@ class Constants {
         const val SELIC = "selic"
         const val INFLATION = "inflation"
         const val TICKER = "ticker"
+        const val CRYPTO = "crypto"
     }
 }

@@ -97,7 +97,7 @@ dependencies {
 
     // Recycler View
     implementation(Dependencies.recyclerView)
-
-    implementation("com.caverock:androidsvg:1.4")
+    // SVG
+    implementation(Dependencies.svg)
 
 }
