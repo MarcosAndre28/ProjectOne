@@ -97,7 +97,8 @@ dependencies {
 
     // Recycler View
     implementation(Dependencies.recyclerView)
+
     // SVG
-    implementation(Dependencies.svg)
+    implementation(Dependencies.androidsvg)
 
 }

@@ -19,6 +19,8 @@
             android:layout_height="@dimen/_40sdp"
             android:background="@color/primary"
             android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
             android:textColor="@color/white"
             android:textSize="@dimen/_24sdp" />
 

@@ -1,6 +1,6 @@
 import org.gradle.api.JavaVersion
 
-object Versions {
+object Versions{
     const val kotlin = "1.7.0"
     const val appcompat = "1.5.1"
     const val material = "1.7.0"
@@ -10,7 +10,6 @@ object Versions {
     const val espresso = "3.5.0"
     const val androidTools = "7.3.1"
     const val jetbrainsKotlin = "1.7.10"
-    const val gradle = "7.4.2"
     const val navigationFragment = "2.5.3"
     const val navigationUi = "2.5.3"
     const val spd = "1.1.0"
@@ -28,10 +27,12 @@ object Versions {
     const val flow = "2.3.0-alpha05"
     const val cardView = "1.0.0"
     const val recyclerView = "1.2.1"
-    const val svg = "1.4"
+    const val androidsvg = "1.4"
+    const val gradle = "7.4.2"
+
 }
 
-object Configs {
+object Configs{
     const val namespace = "com.example.kotlindls"
     const val compileSdk = 33
     const val applicationId = "com.example.kotlindls"
@@ -42,7 +43,7 @@ object Configs {
     const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 }
 
-object Plugins {
+object Plugins{
     const val application = "com.android.application"
     const val android = "android"
     const val kapt = "kotlin-kapt"
@@ -54,12 +55,12 @@ object BuildTypes {
     const val rules = "proguard-rules.pro"
 }
 
-object CompileOptions {
+object CompileOptions{
     val sourceCompatibility = JavaVersion.VERSION_11
     val targetCompatibility = JavaVersion.VERSION_11
 }
 
-object KotlinOptions {
+object KotlinOptions{
     const val jvmTarget = "11"
 }
 
@@ -89,13 +90,13 @@ object Dependencies {
     const val lifecycleViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewmodel}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleViewmodel}"
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
-    const val flow = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.flow}"
+    const val flow =  "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.flow}"
     const val cardView = "androidx.cardview:cardview:${Versions.cardView}"
     const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.cardView}"
-    const val svg = "com.caverock:androidsvg:${Versions.svg}"
+    const val androidsvg = "com.caverock:androidsvg:${Versions.androidsvg}"
 }
 
-object Classpath {
+object Classpath{
     const val androidTools = "com.android.tools.build:gradle:${Versions.androidTools}"
     const val jetbrainsKotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.jetbrainsKotlin}"
     const val gradle = "com.android.tools.build:gradle:${Versions.jetbrainsKotlin}"

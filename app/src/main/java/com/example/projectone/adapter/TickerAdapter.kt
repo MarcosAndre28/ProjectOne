@@ -1,14 +1,23 @@
 package com.example.projectone.adapter
 
 
+import android.graphics.drawable.PictureDrawable
+import android.os.AsyncTask
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.caverock.androidsvg.SVG
+import com.caverock.androidsvg.SVGParseException
 import com.example.kotlindls.R
 import com.example.projectone.db.model.TickerModelDB
+import com.example.projectone.utils.SvgLoaderUtil
+import java.io.IOException
+import java.io.InputStream
+import java.net.HttpURLConnection
+import java.net.URL
 
 
 class TickerAdapter(private val ticker: List<TickerModelDB>) :
@@ -28,13 +37,7 @@ class TickerAdapter(private val ticker: List<TickerModelDB>) :
         val list = ticker[position]
         holder.name.text = list.stock
         holder.close.text = list.close.toString()
-
-//        val svg = SVG.getFromString(list.logo)
-//        Log.d("SVG content", list.logo)
-//        val picture = svg.renderToPicture()
-//        val drawable = PictureDrawable(picture)
-//
-//        holder.logo.setImageDrawable(drawable)
+        SvgLoaderUtil.loadSvgFromUrl(holder.logo, list.logo)
     }
 
     inner class TickerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
