@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/navigation_home">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/navigation_crypto"
         tools:layout="@layout/crypto_fragment"
-        android:name="com.example.projectone.view.fragments.CryptoFragment"
+        android:name="com.example.projectone.ui.fragments.CryptoFragment"
         android:label="CryptoFragment" />
     <fragment
         android:id="@+id/navigation_home"
         tools:layout="@layout/fragment_home"
-        android:name="com.example.projectone.view.fragments.FragmentHome"
+        android:name="com.example.projectone.ui.fragments.HomeFragment"
         android:label="FragmentHome" >
         <action
             android:id="@+id/action_navigation_home_to_navigation_crypto"
@@ -28,11 +28,20 @@
     <fragment
         android:id="@+id/navigation_ticker"
         tools:layout="@layout/ticker_fragment"
-        android:name="com.example.projectone.view.fragments.TickerFragment"
+        android:name="com.example.projectone.ui.fragments.TickerFragment"
         android:label="TickerFragment" />
     <fragment
         android:id="@+id/navigation_favorites"
         tools:layout="@layout/favorites_fragment"
-        android:name="com.example.projectone.view.fragments.FavoritesFragment"
+        android:name="com.example.projectone.ui.fragments.FavoritesFragment"
         android:label="FavoritesFragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.projectone.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 </navigation>

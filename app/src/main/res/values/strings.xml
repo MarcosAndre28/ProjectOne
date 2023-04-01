@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">ProjectOne</string>
-    <string name="home_menu">Home</string>
-    <string name="crypto_menu">Crypto</string>
-    <string name="ticker_menu">Ticker</string>
-    <string name="crypto_List">Crypto List</string>
+
+
+    <!-- Title Fragments -->
+    <string name="title_fragment_info">Status</string>
+    <string name="title_fragment_crypto">Crypto</string>
+    <string name="title_fragment_ticker">Ações</string>
+    <string name="title_fragment_favorites">Favoritos</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -16,4 +19,6 @@
     <string name="bbsa3">BBSA3</string>
     <string name="bth">BTH</string>
     <string name="selic">Selic : 13,25 %</string>
+    <string name="a_es_crypto">Ações / Crypto</string>
+    <string name="price">R$ 80.000</string>
 </resources>

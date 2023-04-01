@@ -13,6 +13,8 @@ class CryptoRepository constructor(private val cryptoDao: CryptoDao) {
         return api.getCrypto()
     }
 
+
+
     suspend fun insert(cryptoModels: List<CryptoModelDB>) {
         cryptoModels.forEach { cryptoModel ->
             cryptoDao.insert(cryptoModel)

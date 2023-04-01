@@ -5,172 +5,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_theme"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.example.projectone.ui.fragments.HomeFragment">
 
-    <TextView
-        android:id="@+id/textViewTitle"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_50sdp"
-        android:gravity="center"
-        android:text="@string/update"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_15sdp" />
+        android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:background="@drawable/round_back_menu1"
-        android:orientation="vertical"
-        android:padding="@dimen/_10sdp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="UselessParent">
-
-            <ImageView
-                android:id="@+id/icon_dollar"
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:padding="@dimen/_2sdp"
-                android:src="@drawable/dollar"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/tvDollar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_toEndOf="@id/icon_dollar"
-                android:text="@string/dolar"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:background="@drawable/round_back_menu1"
-        android:orientation="vertical"
-        android:padding="@dimen/_10sdp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="UselessParent">
-
-            <ImageView
-                android:id="@+id/icon_euro"
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:padding="@dimen/_2sdp"
-                android:src="@drawable/euro"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/tvEuro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_toEndOf="@id/icon_euro"
-                android:textColorHint="@color/white"
-                android:hint="@string/dolar_em_euro"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:background="@drawable/round_back_menu1"
-        android:orientation="vertical"
-        android:padding="@dimen/_10sdp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="UselessParent">
-
-            <ImageView
-                android:id="@+id/icon_inflation"
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:padding="@dimen/_2sdp"
-                android:src="@drawable/inflation"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/tvInflation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_toEndOf="@id/icon_inflation"
-                android:textColorHint="@color/white"
-                android:hint="@string/infa"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:background="@drawable/round_back_menu1"
-        android:orientation="vertical"
-        android:padding="@dimen/_10sdp">
-
-        <RelativeLayout
-            android:id="@+id/viewData"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/primary"
+                android:elevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabIndicatorColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+                app:tabTextAppearance="@style/CustomTabLayout"
+                app:tabTextColor="@color/white" />
 
-            <ImageView
-                android:id="@+id/icon_selic"
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:padding="@dimen/_2sdp"
-                android:src="@drawable/selic"
-                tools:ignore="ContentDescription" />
-
-
-            <TextView
-                android:id="@+id/tvSelic"
+            <ImageButton
+                android:id="@+id/btnLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_toEndOf="@id/icon_selic"
-                android:hint="@string/selic"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-    </LinearLayout>
+                android:background="@android:color/transparent"
+                android:padding="16dp"
+                android:src="@drawable/ic_money"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </LinearLayout>

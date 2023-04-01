@@ -28,7 +28,7 @@ class CryptoViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     // API
-    fun getCryptoData(): Flow<ApiResult<CryptoModel>> {
+    suspend fun getCryptoData(): Flow<ApiResult<CryptoModel>> {
         return flow {
             emit(ApiResult.Loading(null, true))
             try {
@@ -69,11 +69,11 @@ class CryptoViewModel(application: Application) : AndroidViewModel(application) 
             } catch (e: Exception) {
                 emit(ApiResult.Error("Error getting Crypto data"))
                 Timber.e(e)
+            } finally {
+                emit(ApiResult.Loading(null, false))
             }
-            emit(ApiResult.Loading(null, false))
         }
     }
-
 
     // DB
     fun delete(cryptoModelDB: CryptoModelDB) {
