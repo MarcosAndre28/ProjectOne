@@ -10,5 +10,6 @@ class Constants {
         const val INFLATION = "inflation"
         const val TICKER = "ticker"
         const val CRYPTO = "crypto"
+        const val CRYPTO_AVAILABLE = "crypto_available"
     }
 }

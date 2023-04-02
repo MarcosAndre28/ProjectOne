@@ -48,7 +48,7 @@ class InfoFragment : Fragment() {
         getSelicData()
         getInflationData()
         getTickerData()
-        getCryptoData()
+
 
         val formatData = SimpleDateFormat("dd/MM/yyyy")
         val calendar = Calendar.getInstance()
@@ -138,25 +138,6 @@ class InfoFragment : Fragment() {
                     }
                     is ApiResult.Error -> {
                         Timber.d("Error loading Ticker data: ${apiResult.exception}")
-                    }
-                }
-            }
-        }
-    }
-
-    private fun getCryptoData() {
-        CoroutineScope(Dispatchers.Main).launch {
-            cryptoViewModel.getCryptoData().collect { apiResult ->
-                when (apiResult) {
-                    is ApiResult.Loading -> {
-                        Timber.d("Loading Crypto data")
-                    }
-                    is ApiResult.Success -> {
-                        Timber.d("Successful Crypto data")
-
-                    }
-                    is ApiResult.Error -> {
-                        Timber.d("Error loading Crypto data: ${apiResult.exception}")
                     }
                 }
             }
