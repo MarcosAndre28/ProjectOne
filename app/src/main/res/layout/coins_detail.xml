@@ -1,0 +1,220 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="10dp"
+    android:elevation="15dp"
+    cardview:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_gravity="center_horizontal|end"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            cardview:srcCompat="@drawable/crypto" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvTitleCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:text="Currency:" />
+
+        <TextView
+            android:id="@+id/tvCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleCurrencyRateFromUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Currency Rate from USD:" />
+
+        <TextView
+            android:id="@+id/tvCurrencyRateFromUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleCoinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Coin Name:" />
+
+        <TextView
+            android:id="@+id/tvCoinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Coin:" />
+
+        <TextView
+            android:id="@+id/tvCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleRegularMarketChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Regular Market Change:" />
+
+        <TextView
+            android:id="@+id/tvRegularMarketChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleRegularMarketPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Regular Market Price:" />
+
+        <TextView
+            android:id="@+id/tvRegularMarketPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleRegularMarketChangePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Regular Market Change Percent:" />
+
+        <TextView
+            android:id="@+id/tvRegularMarketChangePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleRegularMarketDayLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Regular Market Day Low:" />
+
+        <TextView
+            android:id="@+id/tvRegularMarketDayLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleRegularMarketDayHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Regular Market Day High:" />
+
+        <TextView
+            android:id="@+id/tvRegularMarketDayHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleRegularMarketDayRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Regular Market Day Range:" />
+
+        <TextView
+            android:id="@+id/tvRegularMarketDayRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleRegularMarketVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Regular Market Volume:" />
+
+        <TextView
+            android:id="@+id/tvRegularMarketVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleMarketCap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Market Cap:" />
+
+        <TextView
+            android:id="@+id/tvMarketCap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvTitleRegularMarketTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextTitle"
+            android:layout_marginTop="8dp"
+            android:text="Regular Market Time:" />
+
+        <TextView
+            android:id="@+id/tvRegularMarketTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
