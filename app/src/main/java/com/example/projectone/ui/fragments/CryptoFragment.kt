@@ -1,24 +1,24 @@
 package com.example.projectone.ui.fragments
 
 import android.app.AlertDialog
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlindls.R
 import com.example.kotlindls.databinding.CryptoFragmentBinding
-import com.example.projectone.adapter.CryptoAdapter
+import com.example.projectone.ui.adapter.CryptoAdapter
 import com.example.projectone.base.BaseFragment
 import com.example.projectone.data.viewModel.CryptoViewModel
 import com.example.projectone.db.model.CryptoAvailableModelDB
+import com.example.projectone.db.model.TickerDetailModelDB
+import com.example.projectone.db.model.TickerModelDB
 import kotlinx.coroutines.launch
 import java.util.*
 
@@ -49,7 +49,15 @@ class CryptoFragment : BaseFragment<CryptoFragmentBinding>() {
     }
 
     private fun initRv(){
-        cryptoAdapter = CryptoAdapter()
+        cryptoAdapter = CryptoAdapter { item ->
+            lifecycleScope.launch {
+                val tickerModelDB = cryptoViewModel.getTickerByName(item.coins)
+                val action = TickerFragmentDirections.actionNavigationTickerToTickerDetailFragment(tickerModelDB)
+                findNavController().navigate(action)
+            }
+        }
+
+
         binding.recyclerViewCrypto.apply {
             layoutManager = GridLayoutManager(context,4)
             adapter = cryptoAdapter

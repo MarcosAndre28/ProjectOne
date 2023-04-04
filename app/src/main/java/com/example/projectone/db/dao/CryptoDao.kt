@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.projectone.db.model.CryptoAvailableModelDB
 import com.example.projectone.db.model.CryptoModelDB
+import com.example.projectone.db.model.TickerModelDB
 
 @Dao
 interface CryptoDao {
@@ -16,6 +17,9 @@ interface CryptoDao {
 
     @Query("SELECT COUNT(*) FROM crypto_available WHERE coins = :coin")
     fun checkCryptoAvailableExists(coin: String): Int
+
+    @Query("SELECT * FROM crypto_available WHERE coins = :name")
+    fun getTickerByName(name: String): CryptoAvailableModelDB
 
     @Query("SELECT 1 FROM crypto WHERE id = :id")
     fun exists(id: Long): Boolean

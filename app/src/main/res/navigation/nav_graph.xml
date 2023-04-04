@@ -29,7 +29,14 @@
         android:id="@+id/navigation_ticker"
         tools:layout="@layout/ticker_fragment"
         android:name="com.example.projectone.ui.fragments.TickerFragment"
-        android:label="TickerFragment" />
+        android:label="TickerFragment" >
+        <action
+            android:id="@+id/action_navigation_ticker_to_tickerDetailFragment"
+            app:destination="@id/tickerDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_ticker_to_tickerDetailFragment2"
+            app:destination="@id/tickerDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_favorites"
         tools:layout="@layout/favorites_fragment"
@@ -43,5 +50,14 @@
         <action
             android:id="@+id/action_splashFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/tickerDetailFragment"
+        tools:layout="@layout/fragment_ticker_detail"
+        android:name="com.example.projectone.ui.fragments.TickerDetailFragment"
+        android:label="TickerDetailFragment" >
+        <argument
+            android:name="detail"
+            app:argType="com.example.projectone.db.model.CryptoAvailableModelDB" />
     </fragment>
 </navigation>

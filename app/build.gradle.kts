@@ -2,7 +2,9 @@ import Plugins.kapt
 
 plugins {
     id (Plugins.application)
+    id (Plugins.safeArgs)
     id (Plugins.kapt)
+    id (Plugins.parcelize)
     kotlin (Plugins.android)
 }
 

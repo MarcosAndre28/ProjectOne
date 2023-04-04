@@ -1,9 +1,11 @@
 package com.example.projectone.db.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.projectone.utils.Constants.Companion.TICKER
+import kotlinx.parcelize.Parcelize
 
 @Entity(tableName = TICKER)
 data class TickerModelDB(
@@ -36,3 +38,4 @@ data class TickerModelDB(
     @ColumnInfo(name = "volume")
     val volume: Int
 )
+

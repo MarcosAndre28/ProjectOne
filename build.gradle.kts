@@ -9,7 +9,7 @@ buildscript {
         classpath(Classpath.androidTools)
         classpath(Classpath.jetbrainsKotlin)
         classpath(Classpath.gradle)
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0")
+        classpath(Classpath.safeArgs)
     }
 }
 tasks.register("clean",Delete::class){

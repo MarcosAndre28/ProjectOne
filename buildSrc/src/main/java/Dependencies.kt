@@ -10,6 +10,7 @@ object Versions{
     const val espresso = "3.5.0"
     const val androidTools = "7.3.1"
     const val jetbrainsKotlin = "1.7.10"
+    const val safeArgs = "2.5.3"
     const val navigationFragment = "2.5.3"
     const val navigationUi = "2.5.3"
     const val spd = "1.1.0"
@@ -47,6 +48,8 @@ object Plugins{
     const val application = "com.android.application"
     const val android = "android"
     const val kapt = "kotlin-kapt"
+    const val parcelize = "kotlin-parcelize"
+    const val safeArgs = "androidx.navigation.safeargs"
 }
 
 object BuildTypes {
@@ -100,4 +103,5 @@ object Classpath{
     const val androidTools = "com.android.tools.build:gradle:${Versions.androidTools}"
     const val jetbrainsKotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.jetbrainsKotlin}"
     const val gradle = "com.android.tools.build:gradle:${Versions.jetbrainsKotlin}"
+    const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.safeArgs}"
 }

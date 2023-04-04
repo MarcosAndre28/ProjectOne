@@ -1,11 +1,13 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:padding="10dp"
     android:elevation="15dp"
+    tools:context="com.example.projectone.ui.fragments.TickerDetailFragment"
     cardview:cardCornerRadius="8dp">
 
     <LinearLayout

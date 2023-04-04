@@ -7,6 +7,8 @@ import com.example.projectone.data.models.CryptoModel
 import com.example.projectone.db.dao.CryptoDao
 import com.example.projectone.db.model.CryptoAvailableModelDB
 import com.example.projectone.db.model.CryptoModelDB
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import retrofit2.Response
 
 class CryptoRepository constructor(private val cryptoDao: CryptoDao) {
@@ -40,6 +42,12 @@ class CryptoRepository constructor(private val cryptoDao: CryptoDao) {
     suspend fun updateAll(cryptoModels: List<CryptoModelDB>) {
         cryptoModels.forEach { cryptoModel ->
             cryptoDao.update(cryptoModel)
+        }
+    }
+
+    suspend fun getTickerByName(name: String): CryptoAvailableModelDB {
+        return withContext(Dispatchers.IO) {
+            cryptoDao.getTickerByName(name)
         }
     }
 

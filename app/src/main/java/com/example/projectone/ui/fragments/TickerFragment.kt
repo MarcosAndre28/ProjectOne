@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlindls.databinding.TickerFragmentBinding
-import com.example.projectone.adapter.TickerAdapter
+import com.example.projectone.ui.adapter.TickerAdapter
 import com.example.projectone.base.BaseFragment
 import com.example.projectone.data.viewModel.TickerViewModel
 

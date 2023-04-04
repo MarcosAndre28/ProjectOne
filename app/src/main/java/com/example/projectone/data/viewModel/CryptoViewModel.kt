@@ -48,6 +48,10 @@ class CryptoViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
+    suspend fun getTickerByName(name: String): CryptoAvailableModelDB {
+        return repository.getTickerByName(name)
+    }
+
     fun delete(cryptoModelDB: CryptoModelDB) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.delete(cryptoModelDB)
