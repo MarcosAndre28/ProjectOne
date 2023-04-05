@@ -52,7 +52,7 @@ class CryptoFragment : BaseFragment<CryptoFragmentBinding>() {
         cryptoAdapter = CryptoAdapter { item ->
             lifecycleScope.launch {
                 val tickerModelDB = cryptoViewModel.getTickerByName(item.coins)
-                val action = TickerFragmentDirections.actionNavigationTickerToTickerDetailFragment(tickerModelDB)
+                val action = HomeFragmentDirections.actionNavigationHomeToTickerDetailFragment(tickerModelDB)
                 findNavController().navigate(action)
             }
         }

@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_navigation_home_to_favoritesFragment"
             app:destination="@id/navigation_favorites" />
+        <action
+            android:id="@+id/action_navigation_home_to_tickerDetailFragment"
+            app:destination="@id/tickerDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_ticker"
@@ -32,9 +35,6 @@
         android:label="TickerFragment" >
         <action
             android:id="@+id/action_navigation_ticker_to_tickerDetailFragment"
-            app:destination="@id/tickerDetailFragment" />
-        <action
-            android:id="@+id/action_navigation_ticker_to_tickerDetailFragment2"
             app:destination="@id/tickerDetailFragment" />
     </fragment>
     <fragment

@@ -25,8 +25,12 @@ class TickerDetailFragment : Fragment() {
 
         _binding = FragmentTickerDetailBinding.inflate(inflater,container,false)
         return binding.root
+        getArgs()
     }
 
+    private fun getArgs(){
+        args.detail.coins
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
