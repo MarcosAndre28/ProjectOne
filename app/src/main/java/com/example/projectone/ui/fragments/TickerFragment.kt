@@ -13,7 +13,7 @@ import com.example.projectone.data.viewModel.TickerViewModel
 
 class TickerFragment : BaseFragment<TickerFragmentBinding>(){
 
-    lateinit var tickerViewModel: TickerViewModel
+    private lateinit var tickerViewModel: TickerViewModel
 
     override fun createBinding(inflater: LayoutInflater, container: ViewGroup?): TickerFragmentBinding {
         return TickerFragmentBinding.inflate(inflater,container,false)

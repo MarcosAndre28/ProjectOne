@@ -19,7 +19,7 @@ import timber.log.Timber
 
 class TickerViewModel(application: Application) : AndroidViewModel(application) {
 
-    var repository: TickerRepository
+    private var repository: TickerRepository
     private val viewModelScope = CoroutineScope(Dispatchers.Main)
 
     init {

@@ -3,7 +3,6 @@ package com.example.projectone.data.models
 data class CryptoModel(
     val coins: List<Coin>
 )
-
 data class Coin(
     val currency: String,
     val currencyRateFromUSD: Double,

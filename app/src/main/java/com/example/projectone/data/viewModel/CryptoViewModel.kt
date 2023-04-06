@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import retrofit2.Response
 import timber.log.Timber
 
 
@@ -46,6 +47,10 @@ class CryptoViewModel(application: Application) : AndroidViewModel(application) 
                 }
             }
         }
+    }
+
+    suspend fun getCrypto(coin: String, currency: String): Response<CryptoModel> {
+        return repository.getCrypto(coin, currency)
     }
 
     suspend fun getTickerByName(name: String): CryptoAvailableModelDB {
