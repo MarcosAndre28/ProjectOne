@@ -6,14 +6,11 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.projectone.db.converter.StringListConverter
-import com.example.projectone.db.dao.CryptoDao
-import com.example.projectone.db.dao.InflationDao
-import com.example.projectone.db.dao.SelicDao
-import com.example.projectone.db.dao.TickerDao
+import com.example.projectone.db.dao.*
 import com.example.projectone.db.model.*
 import com.example.projectone.utils.Constants.Companion.DATABASE_NAME
 
-@Database(entities = arrayOf(SelicModelDB::class, InflationModelDB::class, TickerModelDB::class, CryptoModelDB::class, CryptoAvailableModelDB::class), version = 6, exportSchema = false)
+@Database(entities = arrayOf(SelicModelDB::class, InflationModelDB::class, TickerModelDB::class, CryptoModelDB::class, CryptoAvailableModelDB::class, FavoriteTickerModelDB::class), version = 6, exportSchema = false)
 @TypeConverters(StringListConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 
@@ -21,6 +18,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun InflationDao() : InflationDao
     abstract fun TickerDao() : TickerDao
     abstract fun CryptoDao() : CryptoDao
+    abstract fun FavoriteTickerDao() : FavoriteTickerDao
 
     companion object {
 

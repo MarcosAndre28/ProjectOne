@@ -17,8 +17,6 @@ import com.example.projectone.ui.adapter.CryptoAdapter
 import com.example.projectone.base.BaseFragment
 import com.example.projectone.data.viewModel.CryptoViewModel
 import com.example.projectone.db.model.CryptoAvailableModelDB
-import com.example.projectone.db.model.TickerDetailModelDB
-import com.example.projectone.db.model.TickerModelDB
 import kotlinx.coroutines.launch
 import java.util.*
 
@@ -29,10 +27,7 @@ class CryptoFragment : BaseFragment<CryptoFragmentBinding>() {
     private var searchCryptoList: List<CryptoAvailableModelDB> = emptyList()
     private var isSearching = false
 
-    override fun createBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?
-    ): CryptoFragmentBinding {
+    override fun createBinding(inflater: LayoutInflater, container: ViewGroup?): CryptoFragmentBinding {
         return CryptoFragmentBinding.inflate(inflater, container, false)
     }
 
@@ -40,10 +35,9 @@ class CryptoFragment : BaseFragment<CryptoFragmentBinding>() {
         super.onViewCreated(view, savedInstanceState)
 
         cryptoViewModel = ViewModelProvider(this)[CryptoViewModel::class.java]
-
         cryptoViewModel.getCryptoAvailable()
 
-        initRv();
+        initRv()
         initListeners()
 
     }
@@ -51,7 +45,7 @@ class CryptoFragment : BaseFragment<CryptoFragmentBinding>() {
     private fun initRv(){
         cryptoAdapter = CryptoAdapter { item ->
             lifecycleScope.launch {
-                val tickerModelDB = cryptoViewModel.getTickerByName(item.coins)
+                val tickerModelDB = cryptoViewModel.getCryptoByName(item.coins)
                 val action = HomeFragmentDirections.actionNavigationHomeToTickerDetailFragment(tickerModelDB)
                 findNavController().navigate(action)
             }

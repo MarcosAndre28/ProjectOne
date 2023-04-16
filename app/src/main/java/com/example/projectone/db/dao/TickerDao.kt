@@ -13,6 +13,9 @@ interface TickerDao {
     @Query("SELECT COUNT(*) FROM ticker")
     suspend fun tickerCount(): Int
 
+    @Query("SELECT * FROM ticker WHERE name = :name")
+    fun getTickerByName(name: String): TickerModelDB
+
     @Query("SELECT 1 FROM ticker WHERE id = :id")
     fun exists(id: Long): Boolean
 
