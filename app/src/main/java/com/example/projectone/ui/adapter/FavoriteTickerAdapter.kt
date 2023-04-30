@@ -40,7 +40,7 @@ class FavoriteTickerAdapter(private val ticker: List<FavoriteTickerModelDB>) :
         }
     }
 
-     inner class FavoriteTickerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class FavoriteTickerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name = itemView.findViewById<TextView>(R.id.txt_name_title)
         val close = itemView.findViewById<TextView>(R.id.txt_value_valor)
         var logo = itemView.findViewById<ImageView>(R.id.txt_icon_crypto)

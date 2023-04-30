@@ -10,7 +10,7 @@ import com.example.projectone.db.dao.*
 import com.example.projectone.db.model.*
 import com.example.projectone.utils.Constants.Companion.DATABASE_NAME
 
-@Database(entities = arrayOf(SelicModelDB::class, InflationModelDB::class, TickerModelDB::class, CryptoModelDB::class, CryptoAvailableModelDB::class, FavoriteTickerModelDB::class), version = 6, exportSchema = false)
+@Database(entities = arrayOf(SelicModelDB::class, InflationModelDB::class, TickerModelDB::class, CryptoModelDB::class, CryptoAvailableModelDB::class, FavoriteTickerModelDB::class), version = 7, exportSchema = false)
 @TypeConverters(StringListConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 

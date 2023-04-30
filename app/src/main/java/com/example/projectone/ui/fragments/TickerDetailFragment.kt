@@ -39,7 +39,7 @@ class TickerDetailFragment : Fragment() {
     private fun getArgs(){
 
         lifecycleScope.launch {
-            val ticker = cryptoViewModel.getCryptoByName(args.detail.coins)
+            val ticker = cryptoViewModel.getTickerByName(args.detail.coins)
 
             cryptoViewModel.getCryptoData(ticker.toString(), "BRL")
             cryptoViewModel.cryptoData.observe(viewLifecycleOwner){ cryptoDataResponse ->

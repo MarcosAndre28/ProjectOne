@@ -21,5 +21,5 @@ data class FavoriteTickerModelDB(
     @ColumnInfo(name = "stock")
     val stock: String,
 
-)
+    )
 

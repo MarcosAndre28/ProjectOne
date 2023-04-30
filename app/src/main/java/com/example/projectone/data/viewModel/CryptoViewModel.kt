@@ -53,21 +53,21 @@ class CryptoViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-        suspend fun getTickerByName(name: String): CryptoAvailableModelDB {
-            return repository.getTickerByName(name)
-        }
+    suspend fun getTickerByName(name: String): CryptoAvailableModelDB {
+        return repository.getTickerByName(name)
+    }
 
-        fun delete(cryptoModelDB: CryptoModelDB) {
-            viewModelScope.launch(Dispatchers.IO) {
-                repository.delete(cryptoModelDB)
-            }
-        }
-
-        fun getAllCryptos(): LiveData<List<CryptoModelDB>> {
-            return repository.getAllCryptos()
-        }
-
-        fun getAllCryptoAvailable(): LiveData<List<CryptoAvailableModelDB>> {
-            return repository.getAllCryptoAvailable()
+    fun delete(cryptoModelDB: CryptoModelDB) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.delete(cryptoModelDB)
         }
     }
+
+    fun getAllCryptos(): LiveData<List<CryptoModelDB>> {
+        return repository.getAllCryptos()
+    }
+
+    fun getAllCryptoAvailable(): LiveData<List<CryptoAvailableModelDB>> {
+        return repository.getAllCryptoAvailable()
+    }
+}

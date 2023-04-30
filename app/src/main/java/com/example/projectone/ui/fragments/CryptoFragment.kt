@@ -54,7 +54,7 @@ class CryptoFragment : Fragment() {
     private fun initRv(){
         cryptoAdapter = CryptoAdapter { item ->
             lifecycleScope.launch {
-                val tickerModelDB = cryptoViewModel.getCryptoByName(item.coins)
+                val tickerModelDB = cryptoViewModel.getTickerByName(item.coins)
                 val action = HomeFragmentDirections.actionNavigationHomeToTickerDetailFragment(tickerModelDB)
                 findNavController().navigate(action)
             }
