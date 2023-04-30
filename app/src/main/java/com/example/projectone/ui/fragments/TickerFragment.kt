@@ -4,19 +4,27 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlindls.databinding.TickerFragmentBinding
-import com.example.projectone.ui.adapter.TickerAdapter
-import com.example.projectone.base.BaseFragment
 import com.example.projectone.data.viewModel.TickerViewModel
+import com.example.projectone.ui.adapter.TickerAdapter
 
-class TickerFragment : BaseFragment<TickerFragmentBinding>(){
+class TickerFragment : Fragment(){
+
+    private var _binding : TickerFragmentBinding? = null
+    private val binding get() = _binding!!
 
     private lateinit var tickerViewModel: TickerViewModel
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
-    override fun createBinding(inflater: LayoutInflater, container: ViewGroup?): TickerFragmentBinding {
-        return TickerFragmentBinding.inflate(inflater,container,false)
+        _binding = TickerFragmentBinding.inflate(inflater,container,false)
+        return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,5 +39,10 @@ class TickerFragment : BaseFragment<TickerFragmentBinding>(){
                 recyclerViewTicker.adapter = adapter
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

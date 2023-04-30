@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -13,27 +14,30 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.kotlindls.R
 import com.example.kotlindls.databinding.CryptoFragmentBinding
-import com.example.projectone.ui.adapter.CryptoAdapter
-import com.example.projectone.base.BaseFragment
 import com.example.projectone.data.viewModel.CryptoViewModel
 import com.example.projectone.db.model.CryptoAvailableModelDB
-import com.example.projectone.db.model.TickerDetailModelDB
-import com.example.projectone.db.model.TickerModelDB
+import com.example.projectone.ui.adapter.CryptoAdapter
 import kotlinx.coroutines.launch
-import java.util.*
+import java.util.Locale
 
-class CryptoFragment : BaseFragment<CryptoFragmentBinding>() {
+class CryptoFragment : Fragment() {
 
     private lateinit var cryptoViewModel: CryptoViewModel
     private lateinit var cryptoAdapter: CryptoAdapter
     private var searchCryptoList: List<CryptoAvailableModelDB> = emptyList()
     private var isSearching = false
 
-    override fun createBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?
-    ): CryptoFragmentBinding {
-        return CryptoFragmentBinding.inflate(inflater, container, false)
+    private var _binding : CryptoFragmentBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+
+        _binding = CryptoFragmentBinding.inflate(inflater,container,false)
+        return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -119,5 +123,10 @@ class CryptoFragment : BaseFragment<CryptoFragmentBinding>() {
             crypto.coins.lowercase(Locale.ROOT).contains(lowercaseQuery)
         }
         cryptoAdapter.submitList(filteredList)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

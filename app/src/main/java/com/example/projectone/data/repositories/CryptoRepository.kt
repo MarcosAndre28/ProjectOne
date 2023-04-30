@@ -14,8 +14,8 @@ import retrofit2.Response
 class CryptoRepository constructor(private val cryptoDao: CryptoDao) {
     private val api = RetrofitInstance.api
 
-     suspend fun getCrypto(coin: String, currency: String): Response<CryptoModel>{
-         return api.getCrypto(coin, currency)
+    suspend fun getCrypto(coin: String, currency: String): CryptoModel {
+        return api.getCrypto(coin, currency)
     }
 
      suspend fun getCryptoAvailable(): Response<CryptoAvailableModel>{

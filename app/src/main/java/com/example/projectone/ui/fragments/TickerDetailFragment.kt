@@ -44,10 +44,9 @@ class TickerDetailFragment : Fragment() {
         lifecycleScope.launch {
             val ticker = cryptoViewModel.getTickerByName(args.detail.coins)
 
-            val crypto = cryptoViewModel.getCrypto(ticker.toString(), "BRL")
-            if (crypto.isSuccessful){
-                val cryptoItem = crypto.body()
-                cryptoItem?.coins?.forEach { coin ->
+            cryptoViewModel.getCryptoData(ticker.toString(), "BRL")
+            cryptoViewModel.cryptoData.observe(viewLifecycleOwner){ cryptoDataResponse ->
+                cryptoDataResponse.coins.forEach { coin ->
                     binding.apply {
                         tvCurrency.text = coin.currency
                         tvCurrencyRateFromUSD.text = coin.currencyRateFromUSD.toString()
@@ -65,7 +64,6 @@ class TickerDetailFragment : Fragment() {
                     }
                 }
             }
-
         }
 
     }

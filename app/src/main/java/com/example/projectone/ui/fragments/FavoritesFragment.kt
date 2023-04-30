@@ -4,20 +4,31 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.kotlindls.databinding.FavoritesFragmentBinding
-import com.example.projectone.base.BaseFragment
 
-class FavoritesFragment : BaseFragment<FavoritesFragmentBinding>() {
+class FavoritesFragment : Fragment() {
 
-    override fun createBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?
-    ): FavoritesFragmentBinding {
-        return FavoritesFragmentBinding.inflate(inflater, container, false)
+    private var _binding : FavoritesFragmentBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+
+        _binding = FavoritesFragmentBinding.inflate(inflater,container,false)
+        return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
