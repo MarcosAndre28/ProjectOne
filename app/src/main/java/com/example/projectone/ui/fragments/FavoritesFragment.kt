@@ -22,8 +22,19 @@ class FavoritesFragment : Fragment() {
 
     }
 
+    private lateinit var favoriteTickerViewModel: FavoriteTickerViewModel
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        favoriteTickerViewModel = ViewModelProvider(this)[FavoriteTickerViewModel::class.java]
+        favoriteTickerViewModel.getAllFavoriteTickers().observe(viewLifecycleOwner){favoriteTicker ->
+            binding.apply {
+                recyclerViewFavorites.layoutManager = LinearLayoutManager(requireContext())
+                recyclerViewFavorites.setHasFixedSize(true)
+
+                val adapter = FavoriteTickerAdapter(favoriteTicker)
+                recyclerViewFavorites.adapter = adapter
+            }
+        }
 
     }
 

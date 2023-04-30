@@ -8,11 +8,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
-import com.example.kotlindls.R
-import com.example.kotlindls.databinding.FragmentHomeBinding
 import com.example.kotlindls.databinding.FragmentTickerDetailBinding
 import com.example.projectone.data.viewModel.CryptoViewModel
-import com.example.projectone.data.viewModel.TickerViewModel
 import kotlinx.coroutines.launch
 
 
@@ -42,7 +39,7 @@ class TickerDetailFragment : Fragment() {
     private fun getArgs(){
 
         lifecycleScope.launch {
-            val ticker = cryptoViewModel.getTickerByName(args.detail.coins)
+            val ticker = cryptoViewModel.getCryptoByName(args.detail.coins)
 
             cryptoViewModel.getCryptoData(ticker.toString(), "BRL")
             cryptoViewModel.cryptoData.observe(viewLifecycleOwner){ cryptoDataResponse ->

@@ -3,10 +3,10 @@ package com.example.projectone.data.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.projectone.db.AppDatabase
 import com.example.projectone.data.Api.ApiResult
 import com.example.projectone.data.models.TickerModel
 import com.example.projectone.data.repositories.TickerRepository
+import com.example.projectone.db.AppDatabase
 import com.example.projectone.db.model.TickerModelDB
 import com.example.projectone.utils.ApiErrorUtils
 import kotlinx.coroutines.CoroutineScope
@@ -14,6 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import timber.log.Timber
 
 
@@ -68,8 +69,10 @@ class TickerViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-
     // DB
+    suspend fun getTickerByName(name: String): TickerModelDB {
+        return repository.getTickerByName(name)
+    }
     fun delete(tickerModelDB: TickerModelDB) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.delete(tickerModelDB)

@@ -44,10 +44,9 @@ class CryptoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         cryptoViewModel = ViewModelProvider(this)[CryptoViewModel::class.java]
-
         cryptoViewModel.getCryptoAvailable()
 
-        initRv();
+        initRv()
         initListeners()
 
     }
@@ -55,7 +54,7 @@ class CryptoFragment : Fragment() {
     private fun initRv(){
         cryptoAdapter = CryptoAdapter { item ->
             lifecycleScope.launch {
-                val tickerModelDB = cryptoViewModel.getTickerByName(item.coins)
+                val tickerModelDB = cryptoViewModel.getCryptoByName(item.coins)
                 val action = HomeFragmentDirections.actionNavigationHomeToTickerDetailFragment(tickerModelDB)
                 findNavController().navigate(action)
             }

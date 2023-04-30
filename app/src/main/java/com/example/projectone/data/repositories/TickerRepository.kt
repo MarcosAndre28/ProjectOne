@@ -1,15 +1,12 @@
 package com.example.projectone.data.repositories
 
 import androidx.lifecycle.LiveData
-import com.example.projectone.data.Api.Api
 import com.example.projectone.data.Api.RetrofitInstance
-import com.example.projectone.data.models.SelicRate
 import com.example.projectone.data.models.TickerModel
-import com.example.projectone.db.dao.SelicDao
 import com.example.projectone.db.dao.TickerDao
-import com.example.projectone.db.model.InflationModelDB
-import com.example.projectone.db.model.SelicModelDB
 import com.example.projectone.db.model.TickerModelDB
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import retrofit2.Response
 
 class TickerRepository constructor(private val tickerDao: TickerDao) {
@@ -32,6 +29,12 @@ class TickerRepository constructor(private val tickerDao: TickerDao) {
     suspend fun updateAll(tickerModels: List<TickerModelDB>) {
         tickerModels.forEach { tickerModel ->
             tickerDao.update(tickerModel)
+        }
+    }
+
+    suspend fun getTickerByName(name: String): TickerModelDB {
+        return withContext(Dispatchers.IO) {
+            tickerDao.getTickerByName(name)
         }
     }
 
