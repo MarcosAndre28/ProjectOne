@@ -22,12 +22,15 @@ class TickerViewModel(application: Application) : AndroidViewModel(application) 
 
     private var repository: TickerRepository
     private val viewModelScope = CoroutineScope(Dispatchers.Main)
+    private val allFavorites: LiveData<List<TickerModelDB>>
+    val allTickers: LiveData<List<TickerModelDB>>
 
     init {
         val tickerDao = AppDatabase.getAppDatabase(application).TickerDao()
         repository = TickerRepository(tickerDao)
+        allTickers = repository.tickersLiveData
+        allFavorites = repository.allFavorites
     }
-
     // API
     fun getTickerData(): Flow<ApiResult<TickerModel>> {
         return flow {
@@ -79,7 +82,11 @@ class TickerViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    fun getAllTickers(): LiveData<List<TickerModelDB>> {
-        return repository.getAllTickers()
+   suspend fun updateFavoriteStatus(id: Long, isFavorite: Boolean) {
+        repository.updateFavoriteStatus(id, isFavorite)
+    }
+
+    fun getFavoriteTickers(): LiveData<List<TickerModelDB>> {
+        return repository.getFavoriteTickers()
     }
 }

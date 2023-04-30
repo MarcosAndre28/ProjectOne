@@ -25,7 +25,13 @@ interface TickerDao {
     @Update
     suspend fun update(tickerModelDB: TickerModelDB)
 
-    @Query("SELECT * FROM ticker")
+    @Query("SELECT * FROM ticker WHERE isFavorite = 0 ORDER BY id ASC LIMIT 30")
     fun getAllTickers(): LiveData<List<TickerModelDB>>
+
+    @Query("UPDATE ticker SET isFavorite = :isFavorite WHERE id = :id")
+    suspend fun updateFavoriteStatus(id: Long, isFavorite: Boolean)
+
+    @Query("SELECT * FROM ticker WHERE isFavorite = 1")
+    fun getFavoriteTickers(): LiveData<List<TickerModelDB>>
 
 }

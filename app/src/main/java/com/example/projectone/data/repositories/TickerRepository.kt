@@ -12,6 +12,9 @@ import retrofit2.Response
 class TickerRepository constructor(private val tickerDao: TickerDao) {
     private val api = RetrofitInstance.api
 
+    val tickersLiveData: LiveData<List<TickerModelDB>> = tickerDao.getAllTickers()
+    val allFavorites: LiveData<List<TickerModelDB>> = tickerDao.getFavoriteTickers()
+
     suspend fun getTicker(): Response<TickerModel> {
         return api.getTicker()
     }
@@ -44,5 +47,12 @@ class TickerRepository constructor(private val tickerDao: TickerDao) {
 
     fun getAllTickers(): LiveData<List<TickerModelDB>> {
         return tickerDao.getAllTickers()
+    }
+   suspend fun updateFavoriteStatus(id: Long, isFavorite: Boolean) {
+         tickerDao.updateFavoriteStatus(id, isFavorite)
+    }
+
+    fun getFavoriteTickers(): LiveData<List<TickerModelDB>> {
+        return tickerDao.getFavoriteTickers()
     }
 }

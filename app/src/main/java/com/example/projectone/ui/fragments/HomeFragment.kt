@@ -1,5 +1,6 @@
 package com.example.projectone.ui.fragments
 
+import FavoritesFragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View

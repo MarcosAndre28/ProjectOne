@@ -36,6 +36,9 @@ data class TickerModelDB(
     val stock: String,
 
     @ColumnInfo(name = "volume")
-    val volume: Int
+    val volume: Int,
+
+    @ColumnInfo(name = "isFavorite")
+    var isFavorite: Boolean = false
 )
 
